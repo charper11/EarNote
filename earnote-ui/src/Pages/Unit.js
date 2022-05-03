@@ -1,6 +1,11 @@
+import { Button } from '@mui/material';
+
 const Unit = () => {
     return (
-        <div>Unit Page</div>
+        <div>
+          <span>Unit Page</span>
+          <Button href="/lesson">Lesson</Button>
+        </div>
     );
 };
 
