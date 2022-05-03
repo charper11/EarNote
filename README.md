@@ -10,6 +10,7 @@ Getting Started
 
 - Development build
 ```console
+$ npm install
 $ npm start
 ```
 
