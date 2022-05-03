@@ -1,6 +1,11 @@
+import { Button } from '@mui/material';
+
 const Home = () => {
     return (
-        <div>Ear Note</div>
+        <div>
+          <span>Ear Note</span>
+          <Button href="/unit">Unit</Button>
+        </div>
     );
 };
 
