@@ -54,6 +54,7 @@ const Lesson = () => {
     return (
         <div>
             <span>Lesson Page</span>
+            <span>Score: {score} </span>
             <Question
               currQues={currQues}
               setCurrQues={setCurrQues}

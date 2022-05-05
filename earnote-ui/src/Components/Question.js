@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Question = ({
     currQues,
@@ -9,10 +10,21 @@ const Question = ({
     score,
 }) => {
 
-    //const [selected, setSelected] = useState();
+    const [selected, setSelected] = useState();
+    const [isSelected, setIsSelected] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleNext = () => {
-        setCurrQues(currQues + 1);
+        if(currQues > 2) {
+            navigate("/result");
+        }
+        else if(isSelected) {
+            if(selected) setScore(score + 1);
+            setCurrQues(currQues + 1);
+            setSelected();
+            setIsSelected(false);
+        }
     };
 
     const handlePlay = () => {
@@ -20,9 +32,11 @@ const Question = ({
         audio.play();
     };
 
-    const handleSelect = (path) => {
-        var audio = new Audio(path);
+    const handleSelect = (option) => {
+        var audio = new Audio(option.optionAudio);
         audio.play();
+        setSelected(option.isCorrect);
+        setIsSelected(true);
     };
 
     return (
@@ -35,13 +49,13 @@ const Question = ({
               questions[currQues].answerOptions.map((options) => (
                   <button
                     key={options.option}
-                    onClick={() => handleSelect(options.optionAudio)}
+                    onClick={() => handleSelect(options)}
                   >
                       {options.option}
                   </button>
               ))}
 
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} disabled={!(isSelected)}>Submit</Button>
         </div>
     );
 };
