@@ -12,18 +12,23 @@ const Question = ({
 
     const [selected, setSelected] = useState();
     const [isSelected, setIsSelected] = useState(false);
+    const [submitOrNext, setSubmitOrNext] = useState("submit");
 
     const navigate = useNavigate();
 
     const handleNext = () => {
-        if(currQues > 2) {
+        if(submitOrNext === "submit"){
+            setSubmitOrNext("next");
+            if(selected) setScore(score + 1);
+        }
+        else if(currQues > 2) {
             navigate("/result");
         }
-        else if(isSelected) {
-            if(selected) setScore(score + 1);
+        else {
             setCurrQues(currQues + 1);
             setSelected();
             setIsSelected(false);
+            setSubmitOrNext("submit");
         }
     };
 
@@ -50,12 +55,13 @@ const Question = ({
                   <button
                     key={options.option}
                     onClick={() => handleSelect(options)}
+                    disabled={submitOrNext==="next"}
                   >
                       {options.option}
                   </button>
               ))}
 
-              <Button onClick={handleNext} disabled={!(isSelected)}>Submit</Button>
+              <Button onClick={handleNext} disabled={!(isSelected)}>{submitOrNext}</Button>
         </div>
     );
 };

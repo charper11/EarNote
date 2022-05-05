@@ -1,10 +1,11 @@
 import { Button } from '@mui/material';
 
-const Result = () => {
+const Result = ({score}) => {
     return (
         <div>
           <span>Result Page</span>
-          <Button href="/lesson">Lesson</Button>
+          <span> Score: {score} </span>
+          <Button href="/unit">Return to Unit Page</Button>
         </div>
     );
 };

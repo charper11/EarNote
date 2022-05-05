@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import { useState } from 'react';
 import Question from "../Components/Question.js";
 
-const Lesson = () => {
+const Lesson = ({score, setScore}) => {
 
     const questions = [
 		{
@@ -49,7 +49,7 @@ const Lesson = () => {
 
     //const [options, setOptions] = useState();
     const [currQues, setCurrQues] = useState(0);
-    const [score, setScore] = useState(0);
+    //const [score, setScore] = useState(0);
 
     return (
         <div>
