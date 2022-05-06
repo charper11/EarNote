@@ -46,6 +46,10 @@ const Question = ({
 
     return (
         <div>
+            <Button
+              href="/unit">
+              Quit
+            </Button>
             <h1>Question {currQues + 1} :</h1>
             <h2>{questions[currQues].questionText}</h2>
             <Button onClick={handlePlay}>Play</Button>

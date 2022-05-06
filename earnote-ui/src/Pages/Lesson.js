@@ -47,9 +47,7 @@ const Lesson = ({score, setScore}) => {
 		},
 	];
 
-    //const [options, setOptions] = useState();
     const [currQues, setCurrQues] = useState(0);
-    //const [score, setScore] = useState(0);
 
     return (
         <div>
