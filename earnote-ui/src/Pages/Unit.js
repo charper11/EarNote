@@ -1,10 +1,15 @@
 import { Button } from '@mui/material';
 
 const Unit = () => {
+
+    const keys = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "F#", "G"];
+
     return (
         <div>
           <span>Unit Page</span>
-          <Button href="/lesson">Lesson</Button>
+          {keys.map((key) => (
+              <Button key={key} href="/lesson">{key}</Button>
+            ))}
         </div>
     );
 };
