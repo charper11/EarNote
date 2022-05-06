@@ -52,7 +52,7 @@ const Question = ({
             </Button>
             <h1>Question {currQues + 1} :</h1>
             <h2>{questions[currQues].questionText}</h2>
-            <Button onClick={handlePlay}>Play</Button>
+            <Button onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>
 
             {questions[currQues].answerOptions &&
               questions[currQues].answerOptions.map((options) => (
