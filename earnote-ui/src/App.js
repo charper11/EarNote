@@ -3,6 +3,7 @@ import Home from './Pages/Home.js';
 import Unit from './Pages/Unit.js';
 import Lesson from './Pages/Lesson.js';
 import Result from './Pages/Result.js';
+import Header from './Components/Header.js';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <div>
+      <Header />
       <Routes>
       <Route path='/' element={<Home />} exact />
       <Route path='/unit' element={<Unit />} exact />
