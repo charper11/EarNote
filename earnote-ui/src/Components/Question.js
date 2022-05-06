@@ -29,16 +29,18 @@ const Question = ({
             setSelected();
             setIsSelected(false);
             setSubmitOrNext("submit");
+            const audioDefaultPlay = new Audio(questions[currQues + 1].questionAudio);
+            audioDefaultPlay.play();
         }
     };
 
     const handlePlay = () => {
-        var audio = new Audio(questions[currQues].questionAudio);
+        const audio = new Audio(questions[currQues].questionAudio);
         audio.play();
     };
 
     const handleSelect = (option) => {
-        var audio = new Audio(option.optionAudio);
+        const audio = new Audio(option.optionAudio);
         audio.play();
         setSelected(option.isCorrect);
         setIsSelected(true);
@@ -53,6 +55,7 @@ const Question = ({
             <h1>Question {currQues + 1} :</h1>
             <h2>{questions[currQues].questionText}</h2>
             <Button onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>
+            <audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>
 
             {questions[currQues].answerOptions &&
               questions[currQues].answerOptions.map((options) => (
