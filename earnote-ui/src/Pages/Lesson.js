@@ -30,7 +30,7 @@ const Lesson = ({score, setScore, questions}) => {
     */
 
     const [currQues, setCurrQues] = useState(0);
-    console.log(questions);
+    //console.log(questions);
 
     return (
         <div>

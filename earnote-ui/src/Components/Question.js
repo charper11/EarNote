@@ -21,7 +21,7 @@ const Question = ({
             setSubmitOrNext("next");
             if(selected) setScore(score + 1);
         }
-        else if(currQues > 2) {
+        else if(currQues > 8) {
             navigate("/result");
         }
         else {
