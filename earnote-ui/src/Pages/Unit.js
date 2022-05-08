@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Unit = ({fetchQuestions}) => {
 
-    const keys = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "F#", "G"];
+    const keys = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G"];
     const navigate = useNavigate();
 
     const handleClick = (key) => {
