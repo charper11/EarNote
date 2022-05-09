@@ -84,7 +84,7 @@ function App() {
       <Header />
       <Routes>
       <Route path='/' element={<Home unit={unit} setUnit={setUnit} />} exact />
-      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} />} exact />
+      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} />} exact />
       <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} unit={unit} />} exact />
       <Route path='/result' element={<Result score={score}/>} exact />
       </Routes>

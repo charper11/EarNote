@@ -1,13 +1,14 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const Unit = ({fetchQuestions}) => {
+const Unit = ({fetchQuestions, setScore}) => {
 
     const keys = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G"];
     const navigate = useNavigate();
 
     const handleClick = (key) => {
       fetchQuestions(key);
+      setScore(0);
       navigate("/lesson");
     }
 
