@@ -15,10 +15,14 @@ function App() {
 
   const fetchQuestions = (key) => {
     const keyDict = {'C': 1, 'G': 2, 'D': 3, 'A': 4, 'E': 5, 'B': 6, 'Gb': 7, 'Db': 8, 'Ab': 9, 'Eb': 10, 'Bb': 11, 'F': 12};
+    //get the three notes that make up the 3 major notes of the lesson key's chord.
     let keys = [];
     keys.push(keyDict[key]);
     keys.push(keyDict[key]+1 === 13 ? 1 : keyDict[key]+1);
     keys.push(keyDict[key]-1 === 0 ? 12 : keyDict[key]-1);
+
+    //used for making sure the same question isn't asked twice in a row.
+    let lastQuestionAudio = "";
 
     const questionSet = [];
     for(let i = 0; i < 10; i++){
@@ -28,8 +32,15 @@ function App() {
       } else {
         questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
       }
-      const answerAudio = audioPaths[answer][Math.floor(Math.random() * audioPaths[answer].length)];
+
+      //get question/answer audio and make sure it is not the same as the previous question.
+      let answerAudio = "";
+      do {
+        answerAudio = audioPaths[answer][Math.floor(Math.random() * audioPaths[answer].length)];
+      } while(answerAudio === lastQuestionAudio)
       questionSet[i].questionAudio = answerAudio;
+      lastQuestionAudio = answerAudio;
+
       questionSet[i].answerOptions = [];
       let options = [];
       while(options.length < 3) {
