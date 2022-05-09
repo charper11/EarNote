@@ -13,6 +13,7 @@ function App() {
   const [questions, setQuestions] = useState();
   const [score, setScore] = useState(0);
   const [unit, setUnit] = useState();
+  const [lessonKey, setLessonKey] = useState();
 
   const fetchQuestions = (key) => {
     const keyDict = {'C': 1, 'G': 2, 'D': 3, 'A': 4, 'E': 5, 'B': 6, 'Gb': 7, 'Db': 8, 'Ab': 9, 'Eb': 10, 'Bb': 11, 'F': 12};
@@ -84,8 +85,8 @@ function App() {
       <Header />
       <Routes>
       <Route path='/' element={<Home unit={unit} setUnit={setUnit} />} exact />
-      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} unit={unit} />} exact />
-      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} unit={unit} />} exact />
+      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} unit={unit} setLessonKey={setLessonKey} />} exact />
+      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} unit={unit} lessonKey={lessonKey} />} exact />
       <Route path='/result' element={<Result score={score}/>} exact />
       </Routes>
     </div>

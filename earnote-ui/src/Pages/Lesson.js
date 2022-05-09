@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import { useState } from 'react';
 import Question from "../Components/Question.js";
 
-const Lesson = ({score, setScore, questions, unit}) => {
+const Lesson = ({score, setScore, questions, unit, lessonKey}) => {
 
     /*
     const questions = [
@@ -36,8 +36,8 @@ const Lesson = ({score, setScore, questions, unit}) => {
 
     return (
         <div>
-            <span>Lesson Page</span>
-            <span>Score: {score} </span>
+            <span>Lesson Page -- Unit {unit} -- key of {lessonKey} </span>
+            <span>-- Score: {score} </span>
             { 1 === 1 ? (<Question
               currQues={currQues}
               setCurrQues={setCurrQues}
