@@ -23,7 +23,11 @@ function App() {
     const questionSet = [];
     for(let i = 0; i < 10; i++){
       const answer = keys[Math.floor(Math.random() * keys.length)];
-      questionSet.push({questionType: 1, questionText: 'What do you hear?'});
+      if(i>6){
+        questionSet.push({questionType: 1, questionText: 'What do you hear?'});
+      } else {
+        questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
+      }
       const answerAudio = audioPaths[answer][Math.floor(Math.random() * audioPaths[answer].length)];
       questionSet[i].questionAudio = answerAudio;
       questionSet[i].answerOptions = [];
@@ -33,7 +37,15 @@ function App() {
         if(!options.includes(option)) {
           options.push(option);
           if(option === answer) {
-            questionSet[i].answerOptions.push({option: Object.keys(keyDict)[option-1], optionAudio: answerAudio, isCorrect: true});
+            if(i<6) {
+              questionSet[i].answerOptions.push({option: Object.keys(keyDict)[option-1], optionAudio: answerAudio, isCorrect: true});
+            } else {
+              let tmpAudioPath = "";
+              do {
+                tmpAudioPath = audioPaths[option][Math.floor(Math.random() * audioPaths[option].length)];
+              } while(tmpAudioPath === answerAudio)
+              questionSet[i].answerOptions.push({option: Object.keys(keyDict)[option-1], optionAudio: tmpAudioPath, isCorrect: true});
+            }
           } else {
             questionSet[i].answerOptions.push({option: Object.keys(keyDict)[option-1], optionAudio: audioPaths[option][Math.floor(Math.random() * audioPaths[option].length)], isCorrect: false});
           }
