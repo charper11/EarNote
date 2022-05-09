@@ -1,11 +1,11 @@
-import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Result = ({score}) => {
     return (
         <div>
           <span>Result Page</span>
           <span> Score: {score} </span>
-          <Button href="/unit">Return to Unit Page</Button>
+          <Link to="/unit">Return to Unit Page</Link>
         </div>
     );
 };

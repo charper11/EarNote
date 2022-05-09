@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Question = ({
     currQues,
@@ -50,14 +50,12 @@ const Question = ({
 
     return (
         <div>
-            <Button
-              href="/unit">
-              Quit
-            </Button>
+            <Link to="/unit">Quit</Link>
             <h1>Question {currQues + 1} :</h1>
             <h2>{questions[currQues].questionText}</h2>
-            <Button onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>
-            <audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>
+
+            { questions[currQues].questionType !== 4 ? (<Button onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
+            { questions[currQues].questionType !== 4 ? (<audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>) : (<></>)}
 
             {questions[currQues].answerOptions &&
               questions[currQues].answerOptions.map((options) => (
@@ -66,7 +64,7 @@ const Question = ({
                     onClick={() => handleSelect(options, questions[currQues].questionType)}
                     disabled={submitOrNext==="next"}
                   >
-                      {options.option}
+                      {questions[currQues].questionType !== 4 ? (options.option) : ("tst")}
                   </button>
               ))}
 

@@ -36,7 +36,11 @@ function App() {
         }
     }
     if(unit === 2) {
-      questionSet.push({questionType: 3, questionText: 'What key do you hear?'});
+      if(i<6){
+        questionSet.push({questionType: 3, questionText: 'What key do you hear?'});
+      } else {
+        questionSet.push({questionType: 4, questionText: 'Select the ' + Object.keys(keyDict)[answer-1] + ' note.'});
+      }
     }
 
       questionSet[i].questionKey = Object.keys(keyDict)[answer-1];
