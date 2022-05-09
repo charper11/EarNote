@@ -29,8 +29,10 @@ const Question = ({
             setSelected();
             setIsSelected(false);
             setSubmitOrNext("submit");
-            const audioDefaultPlay = new Audio(questions[currQues + 1].questionAudio);
-            audioDefaultPlay.play();
+            if(questions[currQues + 1].questionType !== 4) {
+                const audioDefaultPlay = new Audio(questions[currQues + 1].questionAudio);
+                audioDefaultPlay.play();
+            }
         }
     };
 
@@ -55,7 +57,7 @@ const Question = ({
             <h2>{questions[currQues].questionText}</h2>
 
             { questions[currQues].questionType !== 4 ? (<Button onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
-            { questions[currQues].questionType !== 4 ? (<audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>) : (<></>)}
+            <audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>
 
             {questions[currQues].answerOptions &&
               questions[currQues].answerOptions.map((options) => (
