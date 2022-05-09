@@ -38,7 +38,7 @@ const Lesson = ({score, setScore, questions, unit}) => {
         <div>
             <span>Lesson Page</span>
             <span>Score: {score} </span>
-            { unit === 1 ? (<Question
+            { 1 === 1 ? (<Question
               currQues={currQues}
               setCurrQues={setCurrQues}
               questions={questions}

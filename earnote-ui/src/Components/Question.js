@@ -39,9 +39,11 @@ const Question = ({
         audio.play();
     };
 
-    const handleSelect = (option) => {
-        const audio = new Audio(option.optionAudio);
-        audio.play();
+    const handleSelect = (option, type) => {
+        if(type !== 3) {
+            const audio = new Audio(option.optionAudio);
+            audio.play();
+        }
         setSelected(option.isCorrect);
         setIsSelected(true);
     };
@@ -61,7 +63,7 @@ const Question = ({
               questions[currQues].answerOptions.map((options) => (
                   <button
                     key={options.option}
-                    onClick={() => handleSelect(options)}
+                    onClick={() => handleSelect(options, questions[currQues].questionType)}
                     disabled={submitOrNext==="next"}
                   >
                       {options.option}

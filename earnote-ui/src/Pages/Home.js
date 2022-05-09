@@ -13,7 +13,7 @@ const Home = ({unit, setUnit}) => {
     return (
         <div>
           <Button onClick={() => handleClick(1)}>Unit 1 (beginner)</Button>
-          <Button>Unit 2 (intermediate)</Button>
+          <Button onClick={() => handleClick(2)}>Unit 2 (intermediate)</Button>
           <Button>Unit 3 (expert)</Button>
         </div>
     );

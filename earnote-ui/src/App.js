@@ -28,11 +28,16 @@ function App() {
     const questionSet = [];
     for(let i = 0; i < 10; i++){
       const answer = keys[Math.floor(Math.random() * keys.length)];
-      if(i<6){
-        questionSet.push({questionType: 1, questionText: 'What do you hear?'});
-      } else {
-        questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
-      }
+      if(unit === 1) {
+        if(i<6){
+          questionSet.push({questionType: 1, questionText: 'What do you hear?'});
+        } else {
+          questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
+        }
+    }
+    if(unit === 2) {
+      questionSet.push({questionType: 3, questionText: 'What key do you hear?'});
+    }
 
       questionSet[i].questionKey = Object.keys(keyDict)[answer-1];
 
