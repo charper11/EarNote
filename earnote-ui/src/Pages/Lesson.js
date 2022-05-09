@@ -2,12 +2,13 @@ import { Button } from '@mui/material';
 import { useState } from 'react';
 import Question from "../Components/Question.js";
 
-const Lesson = ({score, setScore, questions}) => {
+const Lesson = ({score, setScore, questions, unit}) => {
 
     /*
     const questions = [
 		{
             questionType: 1,
+            questionKey: G,
 			questionText: 'What do you hear?',
             questionAudio: 'audio/g19.wav',
 			answerOptions: [
@@ -18,6 +19,7 @@ const Lesson = ({score, setScore, questions}) => {
 		},
 		{
             questionType: 2,
+            questionKey: A,
 			questionText: 'Which is the same note?',
             questionAudio: 'audio/a.wav',
 			answerOptions: [
@@ -36,13 +38,15 @@ const Lesson = ({score, setScore, questions}) => {
         <div>
             <span>Lesson Page</span>
             <span>Score: {score} </span>
-            <Question
+            { unit === 1 ? (<Question
               currQues={currQues}
               setCurrQues={setCurrQues}
               questions={questions}
               score={score}
               setScore={setScore}
-            />
+            />) : (
+                <div>test</div>
+            )}
         </div>
     );
 };

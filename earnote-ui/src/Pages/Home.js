@@ -1,10 +1,20 @@
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const Home = ({unit, setUnit}) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = (i) => {
+    setUnit(i);
+    navigate("/unit");
+  }
+
     return (
         <div>
-          <span>Ear Note</span>
-          <Button href="/unit">Unit</Button>
+          <Button onClick={() => handleClick(1)}>Unit 1 (beginner)</Button>
+          <Button>Unit 2 (intermediate)</Button>
+          <Button>Unit 3 (expert)</Button>
         </div>
     );
 };
