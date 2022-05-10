@@ -84,7 +84,7 @@ const Question = ({
                             onClick={() => handleSelect(options, questions[currQues].questionType)}
                             disabled={submitOrNext==="next"}
                         >
-                            {questions[currQues].questionType !== 4 ? (options.option) : ("tst")}
+                            {questions[currQues].questionType !== 4 ? (options.option) : ("🔊")}
                         </button>
                     ))}
                 </div>
