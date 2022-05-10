@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import './Question.css';
 
 const Question = ({
     currQues,
@@ -11,6 +12,7 @@ const Question = ({
 }) => {
 
     const [selected, setSelected] = useState();
+    const [result, setResult] = useState();
     const [isSelected, setIsSelected] = useState(false);
     const [submitOrNext, setSubmitOrNext] = useState("submit");
 
@@ -19,7 +21,7 @@ const Question = ({
     const handleNext = () => {
         if(submitOrNext === "submit"){
             setSubmitOrNext("next");
-            if(selected) setScore(score + 1);
+            if(result) setScore(score + 1);
         }
         else if(currQues > 8) {
             navigate("/result");
@@ -27,6 +29,7 @@ const Question = ({
         else {
             setCurrQues(currQues + 1);
             setSelected();
+            setResult();
             setIsSelected(false);
             setSubmitOrNext("submit");
             if(questions[currQues + 1].questionType !== 4) {
@@ -46,31 +49,55 @@ const Question = ({
             const audio = new Audio(option.optionAudio);
             audio.play();
         }
-        setSelected(option.isCorrect);
+        setResult(option.isCorrect);
+        setSelected(option);
         setIsSelected(true);
     };
 
+    const handleOptionCSS = (i) => {
+        if (submitOrNext === "submit" && selected === i) {
+            return "select";
+        } else if (submitOrNext === "next") {
+            if (selected === i && result) return "correct";
+            else if (selected === i && !result) return "wrong";
+            else if (i.isCorrect) return "correct";
+        }
+    }
+
     return (
-        <div>
+        <div className='question'>
             <Link to="/unit">Quit</Link>
             <h1>Question {currQues + 1} :</h1>
-            <h2>{questions[currQues].questionText}</h2>
 
-            { questions[currQues].questionType !== 4 ? (<Button onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
-            <audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>
+            <div className="singleQuestion">
+                <h2>{questions[currQues].questionText}</h2>
 
-            {questions[currQues].answerOptions &&
-              questions[currQues].answerOptions.map((options) => (
-                  <button
-                    key={options.option}
-                    onClick={() => handleSelect(options, questions[currQues].questionType)}
-                    disabled={submitOrNext==="next"}
-                  >
-                      {questions[currQues].questionType !== 4 ? (options.option) : ("tst")}
-                  </button>
-              ))}
+                { questions[currQues].questionType !== 4 ? (<Button variant="contained" onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
+                <audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>
 
-              <Button onClick={handleNext} disabled={!(isSelected)}>{submitOrNext}</Button>
+                <div className="options">
+                    {questions[currQues].answerOptions &&
+                    questions[currQues].answerOptions.map((options) => (
+                        <button
+                            className={`singleOption ${selected && handleOptionCSS(options)}`}
+                            key={options.option}
+                            onClick={() => handleSelect(options, questions[currQues].questionType)}
+                            disabled={submitOrNext==="next"}
+                        >
+                            {questions[currQues].questionType !== 4 ? (options.option) : ("tst")}
+                        </button>
+                    ))}
+                </div>
+
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleNext}
+                  disabled={!(isSelected)}
+                >
+                    {submitOrNext}
+                </Button>
+            </div>
         </div>
     );
 };

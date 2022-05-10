@@ -1,0 +1,14 @@
+.lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lessonInfo {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
