@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
+import './Result.css';
 
 const Result = ({score}) => {
     return (
-        <div>
-          <span>Result Page</span>
-          <span> Score: {score} </span>
-          <Link to="/unit">Return to Unit Page</Link>
+        <div className='result'>
+          <span className='score'> Score: {score} </span>
+          <Link className='unitLink' to="/unit">Return to Unit Page</Link>
         </div>
     );
 };
