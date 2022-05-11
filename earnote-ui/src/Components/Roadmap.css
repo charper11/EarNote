@@ -20,6 +20,7 @@
 
   .cls-3 {
     fill: hsl(calc(var(--hue)*360/20),90%,65%);
+    cursor: pointer;
   }
 
   .cls-3:nth-child(14n+1){
