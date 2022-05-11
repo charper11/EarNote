@@ -34,73 +34,73 @@ const Roadmap = ({fetchQuestions, setScore, setLessonKey, unit, setLessonUnit}) 
                     <g id="C" onClick={() => eventthis('C')} data-name="C" className="cls-3" transform="translate(290 78)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>C</text>
+                        <text>C {localStorage.getItem('C'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="G" onClick={() => eventthis('G')} data-name="G" className="cls-3" transform="translate(350 90)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>G</text>
+                        <text>G {localStorage.getItem('G'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="D" onClick={() => eventthis('D')} data-name="D" className="cls-3" transform="translate(448 110)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>D</text>
+                        <text>D {localStorage.getItem('D'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="A" onClick={() => eventthis('A')} data-name="A" className="cls-3" transform="translate(437 192)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>A</text>
+                        <text>A {localStorage.getItem('A'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="E" onClick={() => eventthis('E')} data-name="E" className="cls-3" transform="translate(354 192)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>E</text>
+                        <text>E {localStorage.getItem('E'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="B" onClick={() => eventthis('B')} data-name="B" className="cls-3" transform="translate(258 178)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>B</text>
+                        <text>B {localStorage.getItem('B'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="Gb" onClick={() => eventthis('Gb')} data-name="Gb" className="cls-3" transform="translate(163 173)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>Gb</text>
+                        <text>Gb {localStorage.getItem('Gb'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="Db" onClick={() => eventthis('Db')} data-name="Db" className="cls-3" transform="translate(96 184)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>Db</text>
+                        <text>Db {localStorage.getItem('Db'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="Ab" onClick={() => eventthis('Ab')} data-name="Ab" className="cls-3" transform="translate(60 250)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>Ab</text>
+                        <text>Ab {localStorage.getItem('Ab'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="Eb" onClick={() => eventthis('Eb')} data-name="Eb" className="cls-3" transform="translate(94 307)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>Eb</text>
+                        <text>Eb {localStorage.getItem('Eb'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="Bb" onClick={() => eventthis('Bb')} data-name="Bb" className="cls-3" transform="translate(180 305)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>Bb</text>
+                        <text>Bb {localStorage.getItem('Bb'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="F" onClick={() => eventthis('F')} data-name="F" className="cls-3" transform="translate(277 305)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>F</text>
+                        <text>F {localStorage.getItem('F'+unit.toString()) ? "✔️" : ""}</text>
                     </g>
 
                     <g id="Checkpoint" data-name="Checkpoint" className="cls-3" transform="translate(300 388)">
