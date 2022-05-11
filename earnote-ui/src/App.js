@@ -103,7 +103,6 @@ function App() {
       }
     }
     setQuestions(questionSet);
-    setLessonUnit(unit);
   };
 
   return (
@@ -111,7 +110,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-      <Route path='/' element={<Home fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} />} exact />
+      <Route path='/' element={<Home fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} setLessonUnit={setLessonUnit}/>} exact />
       <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/result' element={<Result score={score}/>} exact />
       </Routes>

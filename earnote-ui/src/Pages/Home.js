@@ -1,6 +1,6 @@
 import Roadmap from '../Components/Roadmap.js';
 
-const Home = ({fetchQuestions, setScore, setLessonKey}) => {
+const Home = ({fetchQuestions, setScore, setLessonKey, setLessonUnit}) => {
 
     return (
         <div>
@@ -9,12 +9,14 @@ const Home = ({fetchQuestions, setScore, setLessonKey}) => {
                       setScore={setScore}
                       setLessonKey={setLessonKey}
                       unit={1}
+                      setLessonUnit={setLessonUnit}
           />
           <Roadmap
                       fetchQuestions={fetchQuestions}
                       setScore={setScore}
                       setLessonKey={setLessonKey}
                       unit={2}
+                      setLessonUnit={setLessonUnit}
           />
         </div>
     );
