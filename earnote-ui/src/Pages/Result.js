@@ -5,7 +5,7 @@ const Result = ({score}) => {
     return (
         <div className='result'>
           <span className='score'> Score: {score} </span>
-          <Link className='unitLink' to="/unit">Return to Unit Page</Link>
+          <Link className='unitLink' to="/">Return to Home Page</Link>
         </div>
     );
 };

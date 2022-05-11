@@ -66,7 +66,7 @@ const Question = ({
 
     return (
         <div className='question'>
-            <Link to="/unit">Quit</Link>
+            <Link to="/">Quit</Link>
             <h1>Question {currQues + 1} :</h1>
 
             <div className="singleQuestion">

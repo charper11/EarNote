@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './Pages/Home.js';
-import Unit from './Pages/Unit.js';
 import Lesson from './Pages/Lesson.js';
 import Result from './Pages/Result.js';
 import Header from './Components/Header.js';
@@ -12,10 +11,10 @@ function App() {
 
   const [questions, setQuestions] = useState();
   const [score, setScore] = useState(0);
-  const [unit, setUnit] = useState();
   const [lessonKey, setLessonKey] = useState();
+  const [lessonUnit, setLessonUnit] = useState();
 
-  const fetchQuestions = (key) => {
+  const fetchQuestions = (key, unit) => {
     const keyDict = {'C': 1, 'G': 2, 'D': 3, 'A': 4, 'E': 5, 'B': 6, 'Gb': 7, 'Db': 8, 'Ab': 9, 'Eb': 10, 'Bb': 11, 'F': 12};
     //get the three notes that make up the 3 major notes of the lesson key's chord.
     let keys = [];
@@ -43,7 +42,6 @@ function App() {
         questionSet.push({questionType: 4, questionText: 'Select the ' + Object.keys(keyDict)[answer-1] + ' note.'});
       }
     }
-
       questionSet[i].questionKey = Object.keys(keyDict)[answer-1];
 
       //get question/answer audio and make sure it is not the same as the previous question.
@@ -77,6 +75,7 @@ function App() {
       }
     }
     setQuestions(questionSet);
+    setLessonUnit(unit);
   };
 
   return (
@@ -84,9 +83,8 @@ function App() {
     <div>
       <Header />
       <Routes>
-      <Route path='/' element={<Home unit={unit} setUnit={setUnit} />} exact />
-      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} unit={unit} setLessonKey={setLessonKey} />} exact />
-      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} unit={unit} lessonKey={lessonKey} />} exact />
+      <Route path='/' element={<Home fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} />} exact />
+      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/result' element={<Result score={score}/>} exact />
       </Routes>
     </div>

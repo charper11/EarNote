@@ -1,20 +1,43 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Roadmap from '../Components/Roadmap.js';
 
-const Home = ({unit, setUnit}) => {
+const Home = ({fetchQuestions, setScore, setLessonKey}) => {
 
   const navigate = useNavigate();
 
+  /*
   const handleClick = (i) => {
     setUnit(i);
     navigate("/unit");
   }
 
+  <Button onClick={() => handleClick(1)}>Unit 1 (beginner)</Button>
+
+
+  /*
+            <Roadmap 
+            fetchQuestions={fetchQuestions}
+            setScore={setScore}
+            setUnit={setUnit}
+            setLessonKey={setLessonKey}
+          />
+  */
+
     return (
         <div>
-          <Button onClick={() => handleClick(1)}>Unit 1 (beginner)</Button>
-          <Button onClick={() => handleClick(2)}>Unit 2 (intermediate)</Button>
-          <Button>Unit 3 (expert)</Button>
+          <Roadmap
+                      fetchQuestions={fetchQuestions}
+                      setScore={setScore}
+                      setLessonKey={setLessonKey}
+                      unit={1}
+          />
+          <Roadmap
+                      fetchQuestions={fetchQuestions}
+                      setScore={setScore}
+                      setLessonKey={setLessonKey}
+                      unit={2}
+          />
         </div>
     );
 };

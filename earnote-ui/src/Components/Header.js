@@ -5,6 +5,7 @@ const Header = () => {
     return (
         <div className="header">
             <Link to="/" className="title">Ear Trainer</Link>
+            About Guide Settings
             <hr className="divider" />
         </div>
     );
