@@ -25,6 +25,34 @@ function App() {
     //used for making sure the same question isn't asked twice in a row.
     let lastQuestionAudio = "";
 
+    /*
+    questionSet is an array of question objects that will be constructed like the following example:
+    const questionSet = [
+      {
+              questionType: 1,
+              questionKey: G,
+        questionText: 'What do you hear?',
+              questionAudio: 'audio/g19.wav',
+        answerOptions: [
+          { option: 'A', optionAudio: 'audio/a.wav', isCorrect: false },
+          { option: 'D', optionAudio: 'audio/d.wav', isCorrect: false },
+          { option: 'G', optionAudio: 'audio/g19.wav', isCorrect: true },
+        ],
+      },
+      {
+              questionType: 2,
+              questionKey: A,
+        questionText: 'Which is the same note?',
+              questionAudio: 'audio/a.wav',
+        answerOptions: [
+          { option: 'G', optionAudio: 'audio/g19.wav', isCorrect: false },
+          { option: 'D', optionAudio: 'audio/d.wav', isCorrect: false },
+          { option: 'A', optionAudio: 'audio/a6.wav', isCorrect: true },
+        ],
+      },
+    ];
+    */
+   
     const questionSet = [];
     for(let i = 0; i < 10; i++){
       const answer = keys[Math.floor(Math.random() * keys.length)];
