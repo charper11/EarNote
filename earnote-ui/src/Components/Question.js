@@ -9,6 +9,7 @@ const Question = ({
     questions,
     setScore,
     score,
+    playAudio,
 }) => {
 
     const [selected, setSelected] = useState();
@@ -33,21 +34,14 @@ const Question = ({
             setIsSelected(false);
             setSubmitOrNext("submit");
             if(questions[currQues + 1].questionType !== 4) {
-                const audioDefaultPlay = new Audio(questions[currQues + 1].questionAudio);
-                audioDefaultPlay.play();
+                playAudio(questions[currQues + 1].questionAudio);
             }
         }
     };
 
-    const handlePlay = () => {
-        const audio = new Audio(questions[currQues].questionAudio);
-        audio.play();
-    };
-
     const handleSelect = (option, type) => {
         if(type !== 3) {
-            const audio = new Audio(option.optionAudio);
-            audio.play();
+            playAudio(option.optionAudio);
         }
         setResult(option.isCorrect);
         setSelected(option);
@@ -72,8 +66,7 @@ const Question = ({
             <div className="singleQuestion">
                 <h2>{questions[currQues].questionText}</h2>
 
-                { questions[currQues].questionType !== 4 ? (<Button variant="contained" onClick={handlePlay} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
-                <audio autoPlay><source src={questions[currQues].questionAudio} type="audio/wav" /></audio>
+                { questions[currQues].questionType !== 4 ? (<Button variant="contained" onClick={() => playAudio(questions[currQues].questionAudio)} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
 
                 <div className="options">
                     {questions[currQues].answerOptions &&
