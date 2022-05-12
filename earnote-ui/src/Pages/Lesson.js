@@ -1,12 +1,13 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import Question from "../Components/Question.js";
+import StartPopUp from '../Components/StartPopUp.js';
 import "./Lesson.css";
 
 const Lesson = ({score, setScore, questions, lessonKey, lessonUnit}) => {
 
     const [currQues, setCurrQues] = useState(0);
-    //console.log(questions);
+    const [isFirst, setIsFirst] = useState(true);
 
     return (
         <div className='lesson'>
@@ -23,6 +24,7 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit}) => {
             />) : (
                 <div>test</div>
             )}
+            {isFirst ? <StartPopUp setIsFirst={setIsFirst} /> : null}
         </div>
     );
 };
