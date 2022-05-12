@@ -34,7 +34,7 @@ const Question = ({
             setIsSelected(false);
             setSubmitOrNext("submit");
             if(questions[currQues + 1].questionType !== 4) {
-                playAudio(questions[currQues + 1].questionAudio);
+                setTimeout(() => {playAudio(questions[currQues + 1].questionAudio);}, 1000);
             }
         }
     };

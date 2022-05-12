@@ -4,7 +4,7 @@ const StartPopUp = ({setIsFirst, playAudio, questions}) => {
 
     const handleClick = () => {
         setIsFirst(false);
-        playAudio(questions[0].questionAudio);
+        setTimeout(() => {playAudio(questions[0].questionAudio);}, 300);
     }
 
     return (
