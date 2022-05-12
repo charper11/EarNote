@@ -3,6 +3,7 @@ import Home from './Pages/Home.js';
 import Lesson from './Pages/Lesson.js';
 import Result from './Pages/Result.js';
 import Header from './Components/Header.js';
+import SettingsPopUp from './Components/SettingsPopUp';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
 import audioPaths from './Data/Data';
@@ -13,6 +14,12 @@ function App() {
   const [score, setScore] = useState(0);
   const [lessonKey, setLessonKey] = useState();
   const [lessonUnit, setLessonUnit] = useState();
+
+  const [settingsState, setSettingsState] = useState(false);
+
+  const toggleSettings = () => {
+      setSettingsState(!settingsState);
+  }
 
   const fetchQuestions = (key, unit) => {
     const keyDict = {'C': 1, 'G': 2, 'D': 3, 'A': 4, 'E': 5, 'B': 6, 'Gb': 7, 'Db': 8, 'Ab': 9, 'Eb': 10, 'Bb': 11, 'F': 12};
@@ -108,12 +115,13 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-      <Header />
+      <Header toggleSettings={toggleSettings}/>
       <Routes>
       <Route path='/' element={<Home fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} setLessonUnit={setLessonUnit}/>} exact />
       <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/result' element={<Result score={score} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       </Routes>
+      {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} /> : null}
     </div>
     </BrowserRouter>
   );
