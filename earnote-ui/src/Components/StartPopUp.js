@@ -1,9 +1,10 @@
 import './SettingsPopUp.css';
 
-const StartPopUp = ({setIsFirst}) => {
+const StartPopUp = ({setIsFirst, playAudio, questions}) => {
 
     const handleClick = () => {
         setIsFirst(false);
+        playAudio(questions[0].questionAudio);
     }
 
     return (

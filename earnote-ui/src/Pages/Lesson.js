@@ -9,6 +9,11 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit}) => {
     const [currQues, setCurrQues] = useState(0);
     const [isFirst, setIsFirst] = useState(true);
 
+    const playAudio = (audioPath) => {
+      const audio = new Audio(audioPath);
+      audio.play();
+  };
+
     return (
         <div className='lesson'>
             <div className='lessonInfo'>
@@ -21,10 +26,11 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit}) => {
               questions={questions}
               score={score}
               setScore={setScore}
+              playAudio={playAudio}
             />) : (
                 <div>test</div>
             )}
-            {isFirst ? <StartPopUp setIsFirst={setIsFirst} /> : null}
+            {isFirst ? <StartPopUp setIsFirst={setIsFirst} playAudio={playAudio} questions={questions} /> : null}
         </div>
     );
 };
