@@ -78,6 +78,8 @@ const Question = ({
                             disabled={submitOrNext==="next"}
                         >
                             {questions[currQues].questionType !== 4 ? (options.option) : ("🔊")}
+                            {localStorage.getItem('isColorBlindSet') && options.isCorrect && submitOrNext==="next" ? "\t✔️" : null}
+                            {localStorage.getItem('isColorBlindSet') && submitOrNext==="next" && selected===options && !result ? "\t❌" : null}
                         </button>
                     ))}
                 </div>
