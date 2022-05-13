@@ -22,7 +22,7 @@ const SettingsPopUp = ({toggleSettings}) => {
                 <div>
                   <span>Color Blind Mode</span>
                   <label className="switch">
-                    <input type="checkbox" onClick={setColorMode} />
+                    <input type="checkbox" onClick={setColorMode} defaultChecked={localStorage.getItem('isColorBlindSet')==='true'} />
                     <span className="slider round"></span>
                   </label>
                 </div>
