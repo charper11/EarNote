@@ -4,3 +4,7 @@ a {
     text-decoration: inherit;
     color: inherit;
 }
+
+html * {
+    font-family: 'Concert_One';
+}

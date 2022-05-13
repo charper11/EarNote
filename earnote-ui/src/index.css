@@ -1,1 +1,14 @@
+@font-face {
+    font-family: "Concert_One";
+    src: local("Concert_One"), url("./Fonts/Concert_One/ConcertOne-Regular.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: "Rubik_Glitch";
+    src: local("Rubik_Glitch"), url("./Fonts/Rubik_Glitch/RubikGlitch-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Titan_One";
+    src: local("Titan_One"), url("./Fonts/Titan_One/TitanOne-Regular.ttf") format("truetype");
+}
