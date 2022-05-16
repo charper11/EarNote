@@ -33,7 +33,7 @@ const Question = ({
             setResult();
             setIsSelected(false);
             setSubmitOrNext("submit");
-            if(questions[currQues + 1].questionType !== 4) {
+            if(questions[currQues + 1].questionType !== 4 && currQues !== 2) {
                 setTimeout(() => {playAudio(questions[currQues + 1].questionAudio);}, 1000);
             }
         }
