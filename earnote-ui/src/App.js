@@ -66,7 +66,7 @@ function App() {
     for(let i = 0; i < 10; i++){
       const answer = keys[Math.floor(Math.random() * keys.length)];
       if(unit === 1) {
-        if(i<6){
+        if(i<3){
           questionSet.push({questionType: 1, questionText: 'What do you hear?'});
         } else {
           questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
