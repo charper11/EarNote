@@ -8,6 +8,7 @@ const SettingsPopUp = ({toggleSettings}) => {
 
     const setLanguage = (lang) => {
         lang ? localStorage.setItem('isSpanish', lang) : localStorage.removeItem('isSpanish');
+        toggleSettings();
     }
 
     const setColorMode = () => {
@@ -18,18 +19,20 @@ const SettingsPopUp = ({toggleSettings}) => {
         <div className="modal">
             <div className="modal_content">
                 <span className="close" onClick={handleClose}>&times;</span>
+                <div className='center'>
                 <h2>Settings</h2>
-                <div>
-                  <span>Color Blind Mode</span>
+                <div className='content-list'>
+                  <span className='content-title'>Color Blind Mode</span>
                   <label className="switch">
                     <input type="checkbox" onClick={setColorMode} defaultChecked={localStorage.getItem('isColorBlindSet')==='true'} />
                     <span className="slider round"></span>
                   </label>
                 </div>
-                <div>
-                    <span>Language</span>
-                    <button onClick={() => setLanguage(false)}>English</button>
-                    <button onClick={() => setLanguage(true)}>Español</button>
+                <div className='content-list'>
+                    <span className='content-title'>Language</span>
+                    <button className={localStorage.getItem('isSpanish') ? 'settings-button' : 'settings-button selected'} onClick={() => setLanguage(false)}>English</button>
+                    <button className={localStorage.getItem('isSpanish') ? 'settings-button selected' : 'settings-button'} onClick={() => setLanguage(true)}>Español</button>
+                </div>
                 </div>
             </div>
         </div>
