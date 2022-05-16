@@ -52,9 +52,9 @@ const Question = ({
         if (submitOrNext === "submit" && selected === i) {
             return "select";
         } else if (submitOrNext === "next") {
-            if (selected === i && result) return "correct";
-            else if (selected === i && !result) return "wrong";
-            else if (i.isCorrect) return "correct";
+            if (selected === i && result) return localStorage.getItem('isColorBlindSet') ? "correct colorBlind" : "correct";
+            else if (selected === i && !result) return localStorage.getItem('isColorBlindSet') ? "wrong colorBlind" : "wrong";
+            else if (i.isCorrect) return localStorage.getItem('isColorBlindSet') ? "correct colorBlind" : "correct";
         }
     }
 
