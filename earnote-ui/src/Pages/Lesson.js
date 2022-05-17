@@ -5,7 +5,7 @@ import Question from "../Components/Question.js";
 import StartPopUp from '../Components/StartPopUp.js';
 import "./Lesson.css";
 
-const Lesson = ({score, setScore, questions, lessonKey, lessonUnit}) => {
+const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, thirdNote}) => {
 
     const [currQues, setCurrQues] = useState(0);
     const [isFirst, setIsFirst] = useState(true);
@@ -32,7 +32,7 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit}) => {
             />) : (
                 <div>test</div>
             )}
-            {isFirst ? <StartPopUp setIsFirst={setIsFirst} playAudio={playAudio} questions={questions} /> : null}
+            {isFirst ? <StartPopUp setIsFirst={setIsFirst} playAudio={playAudio} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} /> : null}
             {currQues===3 && !closeInfo ? <InfoPopUp setCloseInfo={setCloseInfo} playAudio={playAudio} questions={questions} /> : null}
         </div>
     );

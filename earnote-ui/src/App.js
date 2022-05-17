@@ -16,6 +16,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [lessonKey, setLessonKey] = useState();
   const [lessonUnit, setLessonUnit] = useState();
+  const [secondNote, setSecondNote] = useState();
+  const [thirdNote, setThirdNote] = useState();
 
   const [settingsState, setSettingsState] = useState(false);
 
@@ -29,7 +31,9 @@ function App() {
     let keys = [];
     keys.push(keyDict[key]);
     keys.push(keyDict[key]+1 === 13 ? 1 : keyDict[key]+1);
+    setSecondNote(Object.keys(keyDict)[keys[1]-1]);
     keys.push(keyDict[key]-1 === 0 ? 12 : keyDict[key]-1);
+    setThirdNote(Object.keys(keyDict)[keys[2]-1]);
 
     //used for making sure the same question isn't asked twice in a row.
     let lastQuestionAudio = "";
@@ -120,7 +124,7 @@ function App() {
       <Header toggleSettings={toggleSettings}/>
       <Routes>
       <Route path='/' element={<Home fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} setLessonUnit={setLessonUnit}/>} exact />
-      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
+      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} />} exact />
       <Route path='/result' element={<Result score={score} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/about' element={<About />} exact />
       <Route path='/guide' element={<Guide />} exact />
