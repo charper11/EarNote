@@ -1,4 +1,5 @@
 import './SettingsPopUp.css';
+import { Button } from '@mui/material';
 
 const InfoPopUp = ({setCloseInfo, playAudio, questions}) => {
 
@@ -10,8 +11,8 @@ const InfoPopUp = ({setCloseInfo, playAudio, questions}) => {
     return (
         <div className="modal">
             <div className="modal_content">
-                <span className="close" onClick={handleClick}>&times;</span>
-                <p>I'm a pop up</p>
+                <p>Let's make it a bit harder. Now it will ask you to match 2 sounds with the same note but different scale.</p>
+                <Button onClick={handleClick}>Start</Button>
             </div>
         </div>
     );

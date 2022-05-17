@@ -15,6 +15,7 @@ const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, se
             <div className="modal_content">
                 <h2>Key of {lessonKey} lesson {lessonUnit}</h2>
                 <p>The chord {lessonKey} major is made up of these 3 notes</p>
+                <p>(click on each to hear an example with that note)</p>
                 <svg height="100" width="100">
                     <circle cx="50" cy="50" r="40" fill={keyColors[lessonKey]} />
                     <text x="50%" y="50%" text-anchor="middle" stroke="#36454F" stroke-width="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{lessonKey}</text>
