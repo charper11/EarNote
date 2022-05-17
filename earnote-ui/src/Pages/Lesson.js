@@ -32,7 +32,7 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
                 <div>test</div>
             )}
             {isFirst ? <StartPopUp setIsFirst={setIsFirst} playAudio={playAudio} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} /> : null}
-            {currQues===3 && !closeInfo ? <InfoPopUp setCloseInfo={setCloseInfo} playAudio={playAudio} questions={questions} /> : null}
+            {currQues===3 && !closeInfo && lessonUnit===1 ? <InfoPopUp setCloseInfo={setCloseInfo} playAudio={playAudio} questions={questions} /> : null}
         </div>
     );
 };
