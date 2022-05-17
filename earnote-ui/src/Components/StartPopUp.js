@@ -29,7 +29,7 @@ const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, se
                     <text x="50%" y="50%" text-anchor="middle" stroke="#36454F" stroke-width="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{thirdNote}</text>
                 </svg>
                 <p>This lesson will train your ear to recognise these 3 notes</p>
-                <Button className="start" onClick={handleClick}>start</Button>
+                <Button className="start" variant="contained" color="primary" onClick={handleClick}>start</Button>
             </div>
         </div>
     );

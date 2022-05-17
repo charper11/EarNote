@@ -12,7 +12,7 @@ const InfoPopUp = ({setCloseInfo, playAudio, questions}) => {
         <div className="modal">
             <div className="modal_content">
                 <p>Let's make it a bit harder. Now it will ask you to match 2 sounds with the same note but different scale.</p>
-                <Button onClick={handleClick}>Start</Button>
+                <Button variant="contained" color="primary" onClick={handleClick}>Start</Button>
             </div>
         </div>
     );
