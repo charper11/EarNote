@@ -18,6 +18,13 @@ const Home = ({fetchQuestions, setScore, setLessonKey, setLessonUnit}) => {
                       unit={2}
                       setLessonUnit={setLessonUnit}
           />
+          <Roadmap
+                      fetchQuestions={fetchQuestions}
+                      setScore={setScore}
+                      setLessonKey={setLessonKey}
+                      unit={3}
+                      setLessonUnit={setLessonUnit}
+          />
         </div>
     );
 };

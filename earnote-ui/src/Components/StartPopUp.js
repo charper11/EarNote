@@ -5,7 +5,9 @@ const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, se
 
     const handleClick = () => {
         setIsFirst(false);
-        setTimeout(() => {playAudio(questions[0].questionAudio);}, 300);
+        if(questions[0].questionType !== 4) {
+            setTimeout(() => {playAudio(questions[0].questionAudio);}, 300);
+        }
     }
 
     const keyColors={"F": "#FF7F50", "C": "#FFDB58", "G": "#AAFF00", "D": "#50C878", "A": "#00A36C", "E": "#9FE2BF", "B": "#96DED1", "Gb": "#7DF9FF", "Db": "#89CFF0", "Ab": "#4682B4", "Eb": "#4169E1", "Bb": "#5D3FD3"};

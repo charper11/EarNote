@@ -75,14 +75,13 @@ function App() {
         } else {
           questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
         }
-    }
-    if(unit === 2) {
-      if(i<6){
-        questionSet.push({questionType: 3, questionText: 'What key do you hear?'});
-      } else {
-        questionSet.push({questionType: 4, questionText: 'Select the ' + Object.keys(keyDict)[answer-1] + ' note.'});
       }
-    }
+      if(unit === 2) {
+          questionSet.push({questionType: 4, questionText: 'Select the ' + Object.keys(keyDict)[answer-1] + ' note.'});
+      }
+      if(unit === 3) {
+        questionSet.push({questionType: 3, questionText: 'What key do you hear?'});
+      }
       questionSet[i].questionKey = Object.keys(keyDict)[answer-1];
 
       //get question/answer audio and make sure it is not the same as the previous question.
@@ -100,9 +99,11 @@ function App() {
         if(!options.includes(option)) {
           options.push(option);
           if(option === answer) {
-            if(i<6) {
+            //if question type is 1, then its the start question and the answer should be the same as the question sound played.
+            if(questionSet[i].questionType === 1) {
               questionSet[i].answerOptions.push({option: Object.keys(keyDict)[option-1], optionAudio: answerAudio, isCorrect: true});
             } else {
+              //else keep getting an audio of the same key until it is different from the question audio.
               let tmpAudioPath = "";
               do {
                 tmpAudioPath = audioPaths[option][Math.floor(Math.random() * audioPaths[option].length)];
