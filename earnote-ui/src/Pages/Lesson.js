@@ -12,6 +12,10 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
 
     const playAudio = (audioPath) => {
       const audio = new Audio(audioPath);
+      if(audioPath === "audio/piano-single-note-g.wav" || audioPath === "audio/piano-note-e.wav" || audioPath === "audio/piano-Gb.wav") {
+        audio.volume = 0.5;
+      }
+
       audio.play();
   };
 
