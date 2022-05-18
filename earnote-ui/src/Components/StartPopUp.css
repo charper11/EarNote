@@ -24,6 +24,6 @@
     cursor: pointer;
 }
 
-.note-text {
-    cursor: pointer;
+.note-circle:hover {
+    transform: scale(1.1);
 }
