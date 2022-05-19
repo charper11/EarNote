@@ -21,18 +21,18 @@ const CircleOfFifths = () => {
                 <use xlinkHref="#c" className='b-note'/>
                 <use xlinkHref="#c" className='e-note'/>
 
-                <text className='text' y="-40">C</text>
-                <text className='text' x="20" y="-34.6">G</text>
-                <text className='text' x="34.6" y="-20">D</text>
-                <text className='text' x="40">A</text>
-                <text className='text' x="34.6" y="20">E</text>
-                <text className='text' x="20" y="34.6">B</text>
-                <text className='text' y="40">Gb</text>
-                <text className='text' x="-20" y="34.6">Db</text>
-                <text className='text' x="-34.6" y="20">Ab</text>
-                <text className='text' x="-40">Eb</text>
-                <text className='text' x="-34.6" y="-20">Bb</text>
-                <text className='text' x="-20" y="-34.6">F</text>
+                <text className='text' y="-37">C</text>
+                <text className='text' x="20" y="-31.6">G</text>
+                <text className='text' x="34.6" y="-17">D</text>
+                <text className='text' x="40" y="3">A</text>
+                <text className='text' x="34.6" y="23">E</text>
+                <text className='text' x="20" y="37.6">B</text>
+                <text className='text' y="43">Gb</text>
+                <text className='text' x="-20" y="37.6">Db</text>
+                <text className='text' x="-34.6" y="23">Ab</text>
+                <text className='text' x="-40" y="3">Eb</text>
+                <text className='text' x="-34.6" y="-17">Bb</text>
+                <text className='text' x="-20" y="-31.6">F</text>
             </svg>
         </div>
     );
