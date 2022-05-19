@@ -8,6 +8,7 @@ const About = () => {
           <h1>About</h1>
           <h2>What is Ear Trainer?</h2>
           <h2>How do I learn with Ear Trainer?</h2>
+          <h2>Why use Ear Trainer?</h2>
           <Link to="/">Return to Home Page</Link>
         </div>
     );
