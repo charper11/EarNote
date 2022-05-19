@@ -5,9 +5,9 @@ const About = () => {
 
     return (
         <div className='about'>
-          <h2>About</h2>
-          <h3>What is Ear Trainer?</h3>
-          <h3>How do I learn with Ear Trainer?</h3>
+          <h1>About</h1>
+          <h2>What is Ear Trainer?</h2>
+          <h2>How do I learn with Ear Trainer?</h2>
           <Link to="/">Return to Home Page</Link>
         </div>
     );
