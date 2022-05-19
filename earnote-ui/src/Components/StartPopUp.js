@@ -32,19 +32,19 @@ const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, se
                 <svg height="100" width="100">
                     <g id="first-note" className="note-circle" onClick={() => playAudio(keyProps[lessonKey][1])}>
                       <circle cx="50" cy="50" r="40" fill={keyProps[lessonKey][0]} />
-                      <text x="50%" y="50%" text-anchor="middle" stroke="#36454F" stroke-width="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{lessonKey}</text>
+                      <text x="50%" y="50%" textAnchor="middle" stroke="#36454F" strokeWidth="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{lessonKey}</text>
                     </g>
                 </svg>
                 <svg height="100" width="100">
                     <g id="first-note" className="note-circle" onClick={() => playAudio(keyProps[secondNote][1])}>
                       <circle cx="50" cy="50" r="40" fill={keyProps[secondNote][0]} />
-                      <text x="50%" y="50%" text-anchor="middle" stroke="#36454F" stroke-width="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{secondNote}</text>
+                      <text x="50%" y="50%" textAnchor="middle" stroke="#36454F" strokeWidth="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{secondNote}</text>
                     </g>
                 </svg>
                 <svg height="100" width="100">
                     <g id="first-note" className="note-circle" onClick={() => playAudio(keyProps[thirdNote][1])}>
                       <circle cx="50" cy="50" r="40" fill={keyProps[thirdNote][0]} />
-                      <text x="50%" y="50%" text-anchor="middle" stroke="#36454F" stroke-width="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{thirdNote}</text>
+                      <text x="50%" y="50%" textAnchor="middle" stroke="#36454F" strokeWidth="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{thirdNote}</text>
                     </g>
                 </svg>
                 <p>This lesson will train your ear to recognise these 3 notes</p>
