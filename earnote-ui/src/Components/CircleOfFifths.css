@@ -12,63 +12,63 @@
     transform: rotate(-15);
 }
 
-.red {
-    stroke: red;
+.a-note {
+    stroke: #00A36C;
     stroke-dashoffset: 10;
 }
 
-.gold {
-    stroke: gold;
+.d-note {
+    stroke: #50C878;
     stroke-dashoffset: 30.91;
 }
 
-.blue {
-    stroke: blue;
+.g-note {
+    stroke: #AAFF00;
     stroke-dashoffset: 51.81;
 }
 
-.yellow {
-    stroke: yellow;
+.c-note {
+    stroke: #FFDB58;
     stroke-dashoffset: 72.71;
 }
 
-.green {
-    stroke: green;
+.f-note {
+    stroke: #FF7F50;
     stroke-dashoffset: 93.61;
 }
 
-.black {
-    stroke: black;
+.bb-note {
+    stroke: #5D3FD3;
     stroke-dashoffset: 114.51;
 }
 
-.gray {
-    stroke: gray;
+.eb-note {
+    stroke: #4169E1;
     stroke-dashoffset: 135.41;
 }
 
-.purple {
-    stroke: purple;
+.ab-note {
+    stroke: #4682B4;
     stroke-dashoffset: 156.31
 }
 
-.brown {
-    stroke: brown;
+.db-note {
+    stroke: #89CFF0;
     stroke-dashoffset: 177.21;
 }
 
-.magenta {
-    stroke: magenta;
+.gb-note {
+    stroke: #7DF9FF;
     stroke-dashoffset: 198.11;
 }
 
-.teal {
-    stroke: teal;
+.b-note {
+    stroke: #96DED1;
     stroke-dashoffset: 219.02;
 }
 
-.orange {
-    stroke: orange;
+.e-note {
+    stroke: #9FE2BF;
     stroke-dashoffset: 240.02;
 }
 
@@ -76,4 +76,5 @@
     font-size: 10px;
     font-weight: 700;
     text-anchor: middle;
+    fill: #36454F;
 }
