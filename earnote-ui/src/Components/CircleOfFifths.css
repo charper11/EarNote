@@ -1,0 +1,79 @@
+.wheel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.breaks {
+    stroke-width: 20;
+    fill: none;
+    stroke-dasharray: 20.91 230.08;
+    transform: rotate(-15);
+}
+
+.red {
+    stroke: red;
+    stroke-dashoffset: 10;
+}
+
+.gold {
+    stroke: gold;
+    stroke-dashoffset: 30.91;
+}
+
+.blue {
+    stroke: blue;
+    stroke-dashoffset: 51.81;
+}
+
+.yellow {
+    stroke: yellow;
+    stroke-dashoffset: 72.71;
+}
+
+.green {
+    stroke: green;
+    stroke-dashoffset: 93.61;
+}
+
+.black {
+    stroke: black;
+    stroke-dashoffset: 114.51;
+}
+
+.gray {
+    stroke: gray;
+    stroke-dashoffset: 135.41;
+}
+
+.purple {
+    stroke: purple;
+    stroke-dashoffset: 156.31
+}
+
+.brown {
+    stroke: brown;
+    stroke-dashoffset: 177.21;
+}
+
+.magenta {
+    stroke: magenta;
+    stroke-dashoffset: 198.11;
+}
+
+.teal {
+    stroke: teal;
+    stroke-dashoffset: 219.02;
+}
+
+.orange {
+    stroke: orange;
+    stroke-dashoffset: 240.02;
+}
+
+.text {
+    font-size: 10px;
+    font-weight: 700;
+    text-anchor: middle;
+}
