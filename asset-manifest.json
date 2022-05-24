@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/EarTrainer/static/css/main.fa5f7366.css",
-    "main.js": "/EarTrainer/static/js/main.22fb8876.js",
+    "main.js": "/EarTrainer/static/js/main.917fa9b5.js",
     "static/media/RubikGlitch-Regular.ttf": "/EarTrainer/static/media/RubikGlitch-Regular.c45582ca18588f33422e.ttf",
     "static/media/ConcertOne-Regular.ttf": "/EarTrainer/static/media/ConcertOne-Regular.646d19d3a58116d78c9c.ttf",
     "static/media/TitanOne-Regular.ttf": "/EarTrainer/static/media/TitanOne-Regular.465442311c8eb8cd5fe8.ttf",
     "index.html": "/EarTrainer/index.html",
     "main.fa5f7366.css.map": "/EarTrainer/static/css/main.fa5f7366.css.map",
-    "main.22fb8876.js.map": "/EarTrainer/static/js/main.22fb8876.js.map"
+    "main.917fa9b5.js.map": "/EarTrainer/static/js/main.917fa9b5.js.map"
   },
   "entrypoints": [
     "static/css/main.fa5f7366.css",
-    "static/js/main.22fb8876.js"
+    "static/js/main.917fa9b5.js"
   ]
 }
