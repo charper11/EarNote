@@ -6,7 +6,7 @@ import Header from './Components/Header.js';
 import SettingsPopUp from './Components/SettingsPopUp';
 import About from './Pages/About';
 import Guide from './Pages/Guide';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
 import audioPaths from './Data/Data';
 
@@ -120,7 +120,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <div>
       <Header toggleSettings={toggleSettings}/>
       <Routes>
@@ -132,7 +132,7 @@ function App() {
       </Routes>
       {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} /> : null}
     </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
