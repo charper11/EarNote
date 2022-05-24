@@ -14,6 +14,12 @@ $ npm install
 $ npm start
 ```
 
+- Deployment build
+```console
+$ npm add gh-pages
+$ npm run deploy
+```
+
 Debugging
 ---------
 - Use chrome developer tools
