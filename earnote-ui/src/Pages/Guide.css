@@ -1,3 +1,19 @@
 .guide {
     padding-top: 60px;
 }
+
+@media screen and (min-width: 768px) {
+.float-container {
+    padding-bottom: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.circle-p {
+    padding: 50px;
+}
+}
