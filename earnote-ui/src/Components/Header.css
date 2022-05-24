@@ -88,6 +88,7 @@
     .nav-menu li {
         text-align: center;
         margin: 0;
+        padding: 20px;
     }
 
     .nav-menu li a {
