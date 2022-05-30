@@ -20,16 +20,6 @@
     overflow: auto;
 }
 
-.close {
-  display: flex;
-  justify-content: center;
-}
-
-.center {
-  margin-left: 33%;
-  width: 50%;
-}
-
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -94,6 +84,8 @@
   }
 
   .content-list {
+    display: flex;
+    justify-content: center;
     padding-bottom: 20px;
   }
 

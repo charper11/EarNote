@@ -44,8 +44,7 @@ const SettingsPopUp = ({toggleSettings}) => {
     return (
         <div className="modal">
             <div className="modal_content">
-                <div className='center'>
-                    <h2>Settings</h2>
+                    <div className='content-list'><h2>Settings</h2></div>
                     <div className='content-list'>
                     <span className='content-title'>Color Blind Mode</span>
                     <label className="switch">
@@ -71,7 +70,7 @@ const SettingsPopUp = ({toggleSettings}) => {
                             50%
                         </button>
                     </div>
-                    <div className='close'>
+                    <div className='content-list'>
                         <Button
                             variant="contained"
                             color="primary"
@@ -79,7 +78,6 @@ const SettingsPopUp = ({toggleSettings}) => {
                             Done
                         </Button>
                     </div>
-                </div>
             </div>
         </div>
     );
