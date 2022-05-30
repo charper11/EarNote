@@ -6,6 +6,10 @@
     margin-left: 12px;
 }
 
+.title:hover {
+    text-decoration: none;
+}
+
 .settingButton {
     border: 0;
     background-color: #fff;
