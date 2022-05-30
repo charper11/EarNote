@@ -66,7 +66,7 @@ const Question = ({
             <div className="singleQuestion">
                 <h2>{questions[currQues].questionText}</h2>
 
-                {questions[currQues].questionType !== 1 ? (<Button variant="contained" onClick={() => playAudio(questions[currQues].questionAudio)} disabled={submitOrNext==="next"}>Play</Button>) : (<></>)}
+                <Button variant="contained" onClick={() => playAudio(questions[currQues].questionAudio)} disabled={submitOrNext==="next"}>Play</Button>
 
                 <div className="options">
                     {questions[currQues].answerOptions &&
