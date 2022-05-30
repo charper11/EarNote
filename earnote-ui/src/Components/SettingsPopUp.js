@@ -1,5 +1,6 @@
 import './SettingsPopUp.css';
 import { useState } from 'react';
+import { Button } from '@mui/material';
 
 const SettingsPopUp = ({toggleSettings}) => {
 
@@ -43,7 +44,6 @@ const SettingsPopUp = ({toggleSettings}) => {
     return (
         <div className="modal">
             <div className="modal_content">
-                <span className="close" onClick={handleClose}>&times;</span>
                 <div className='center'>
                     <h2>Settings</h2>
                     <div className='content-list'>
@@ -70,6 +70,14 @@ const SettingsPopUp = ({toggleSettings}) => {
                             onClick={setCriteria}>
                             50%
                         </button>
+                    </div>
+                    <div className='close'>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={handleClose}>
+                            Done
+                        </Button>
                     </div>
                 </div>
             </div>
