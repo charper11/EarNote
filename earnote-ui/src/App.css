@@ -8,3 +8,7 @@ a {
 html * {
     font-family: 'Concert_One';
 }
+
+body {
+    margin: 0px;
+}

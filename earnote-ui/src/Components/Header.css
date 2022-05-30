@@ -1,8 +1,9 @@
 .title {
     text-transform: uppercase;
-    font-size: 6vw;
+    font-size: 60px;
     font-family: 'Rubik_Glitch';
     cursor: pointer;
+    margin-left: 12px;
 }
 
 .settingButton {
@@ -55,7 +56,8 @@
     transition: background-color 0.2s ease-in-out;
     position: absolute;
     top: 50%;
-    right: 25px;
+    right: 0px;
+    margin-right: 12px;
     transform: translateY(-50%);
     display: none;
 }
@@ -65,6 +67,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .title {
+        font-size: 36px;
+    }
+
     .hamburger {
         display: block;
     }
