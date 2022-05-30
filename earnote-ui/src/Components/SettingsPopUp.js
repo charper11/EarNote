@@ -1,14 +1,22 @@
 import './SettingsPopUp.css';
+import { useState } from 'react';
 
 const SettingsPopUp = ({toggleSettings}) => {
+
+    const [selected, setSelected] = useState();
 
     const handleClose = () => {
         toggleSettings();
     }
 
     const setLanguage = (lang) => {
-        lang ? localStorage.setItem('isSpanish', lang) : localStorage.removeItem('isSpanish');
-        toggleSettings();
+        if(lang){
+            localStorage.setItem('isSpanish', lang)
+            setSelected("spanish");
+        } else{
+            localStorage.removeItem('isSpanish');
+            setSelected("english");
+        }
     }
 
     const setColorMode = () => {
@@ -19,10 +27,17 @@ const SettingsPopUp = ({toggleSettings}) => {
         if(localStorage.getItem('passCriteria')) {
             localStorage.removeItem('passCriteria');
         }
+        setSelected("none");
     }
 
     const setCriteria = () => {
         localStorage.setItem('passCriteria', 5);
+        setSelected("50");
+    }
+
+    const handleOptionCSS = (i) => {
+        if(!localStorage.getItem('passCriteria') && i === "none") return "selected";
+        if(localStorage.getItem('passCriteria') === '5' && i === "50") return "selected";
     }
 
     return (
@@ -45,8 +60,16 @@ const SettingsPopUp = ({toggleSettings}) => {
                     </div>
                     <div className='content-list'>
                         <span className='content-title'>Pass Criteria</span>
-                        <button onClick={removeCriteria}>None</button>
-                        <button onClick={setCriteria}>50%</button>
+                        <button
+                            className={`settings-button ${handleOptionCSS('none')}`}
+                            onClick={removeCriteria}>
+                            None
+                        </button>
+                        <button
+                            className={`settings-button ${handleOptionCSS('50')}`}
+                            onClick={setCriteria}>
+                            50%
+                        </button>
                     </div>
                 </div>
             </div>
