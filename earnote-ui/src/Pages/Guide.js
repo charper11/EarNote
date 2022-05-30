@@ -12,8 +12,8 @@ const Guide = () => {
           <div className="float-child"><CircleOfFifths /></div>
           <div className='float-child'>
           <p className='circle-p'>Starting with C and moving clockwise note to note (C to G to D to A, etc), you'll notice that after 12 notes we return back to our starting point. This cyclical nature is called the circle of fifths and is one of the most fundamental principles in all of music theory.</p>
-          <p className='circle-p'>If you pick one of the 12 notes in the circle, it along with the note to the left and the right make up what is called the three primary chords of that key.</p>
-          <p className='circle-p'>Ear trainer progresses through this circle, with each lesson covering one set of primary chords at a time.</p>
+          <p className='circle-p'>If you pick one of the 12 notes in the circle, it along with the note to the right, and the note 4 to the right, are the notes that create the chord of that key.</p>
+          <p className='circle-p'>Ear trainer progresses through this circle, with each lesson covering one chord at a time.</p>
           </div>
           </div>
           <h2>Scale</h2>

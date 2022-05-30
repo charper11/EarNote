@@ -32,7 +32,7 @@ function App() {
     keys.push(keyDict[key]);
     keys.push(keyDict[key]+1 === 13 ? 1 : keyDict[key]+1);
     setSecondNote(Object.keys(keyDict)[keys[1]-1]);
-    keys.push(keyDict[key]-1 === 0 ? 12 : keyDict[key]-1);
+    keys.push(keyDict[key]+4 % 12 === 0 ? 12 : keyDict[key]+4 % 12);
     setThirdNote(Object.keys(keyDict)[keys[2]-1]);
 
     //used for making sure the same question isn't asked twice in a row.

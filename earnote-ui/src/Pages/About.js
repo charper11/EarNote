@@ -9,9 +9,9 @@ const About = () => {
           <h2>What is Ear Trainer?</h2>
           <p>The Ear Trainer program is a fun and easy to start way to recognize notes just by hearing them.</p>
           <h2>How do I learn with Ear Trainer?</h2>
-          <p>The ear trainer program takes you on a path around the Circle of Fifths, learning notes in one primary chord at a time.</p>
-          <p>It begins with the key of C, with the primary notes being C, G, and F. This is the predominant starting point in music schools as the notes are the most distinct from one another.</p>
-          <p>Each lesson progresses clockwise through the Circle of Fifths, naturally getting more challenging as the notes in the primary chords become more closely related.</p>
+          <p>The ear trainer program takes you on a path around the Circle of Fifths, learning notes in one chord at a time.</p>
+          <p>It begins with the key of C, with the notes making up the C chord being C, E, and G. This is the predominant starting point in music schools as the notes are the most distinct from one another.</p>
+          <p>Each lesson progresses clockwise through the Circle of Fifths, naturally getting more challenging as the notes in the chords become more closely related.</p>
           <p>Once a lesson is completed, your progress will be updated. How to determine what constitutes a completed lesson can be applied in the settings. By default, completing all 10 questions regardless of score will award a completed lesson.</p>
           <h2>Why use Ear Trainer?</h2>
           <p>A strong inner ear is essential for understanding music composition. Great musicians have advanced listening skills that improve the quality of their performances, as well as the music creation process.</p>
