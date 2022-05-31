@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Question.css';
 
 const Question = ({
@@ -60,9 +60,6 @@ const Question = ({
 
     return (
         <div className='question'>
-            <Link to="/">Quit</Link>
-            <h1>Question {currQues + 1} :</h1>
-
             <div className="singleQuestion">
                 <h2>{questions[currQues].questionText}</h2>
 

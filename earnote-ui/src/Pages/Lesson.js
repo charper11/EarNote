@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import InfoPopUp from '../Components/InfoPopUp.js';
 import Question from "../Components/Question.js";
 import StartPopUp from '../Components/StartPopUp.js';
@@ -21,8 +22,12 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
 
     return (
         <div className='lesson'>
+            <div className='lessonTitle'>
+              <h3>Unit {lessonUnit} key of {lessonKey}</h3>
+            </div>
             <div className='lessonInfo'>
-              <span>Unit {lessonUnit} key of {lessonKey}</span>
+              <Link to="/">Quit</Link>
+              <span>Question {currQues + 1}</span>
               <span>Score: {score}</span>
             </div>
             { 1 === 1 ? (<Question
