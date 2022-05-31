@@ -31,6 +31,7 @@
 
 .nav-menu {
     margin-left: auto;
+    font-size: 25px;
 }
 
 .nav-menu ul {
@@ -82,7 +83,7 @@
 
     .nav-menu ul {
         position: absolute;
-        top: 60px;
+        top: 50px;
         left: 0;
         flex-direction: column;
         width: 100%;
