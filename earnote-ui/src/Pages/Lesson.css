@@ -35,7 +35,6 @@
     height: 100%;
     border-radius: 20px;
     background-color: #1da1f2;
-    box-shadow: 2px 14px 15px -7px rgba(30, 166, 250, 0.36);
     position: relative;
     overflow: hidden;
 }
