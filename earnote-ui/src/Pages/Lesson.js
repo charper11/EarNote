@@ -27,7 +27,7 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
             </div>
             <div className='lessonInfo'>
               <Link to="/">Quit</Link>
-              <span>Question {currQues + 1}</span>
+              <progress id="question" max="10" value={currQues+1}>{currQues+1}</progress>
               <span>Score: {score}</span>
             </div>
             { 1 === 1 ? (<Question
