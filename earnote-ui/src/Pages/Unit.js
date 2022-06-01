@@ -1,7 +1,7 @@
-import "./Roadmap.css";
+import "./Unit.css";
 import { useNavigate } from 'react-router-dom';
 
-const Roadmap = ({fetchQuestions, setScore, setLessonKey, lessonUnit}) => {
+const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit}) => {
     const unit = lessonUnit;
 
     const navigate = useNavigate();
@@ -128,4 +128,4 @@ const Roadmap = ({fetchQuestions, setScore, setLessonKey, lessonUnit}) => {
     );
 };
 
-export default Roadmap;
+export default Unit;

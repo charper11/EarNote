@@ -6,6 +6,7 @@ import Header from './Components/Header.js';
 import SettingsPopUp from './Components/SettingsPopUp';
 import About from './Pages/About';
 import Guide from './Pages/Guide';
+import Unit from './Pages/Unit';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
 import audioPaths from './Data/Data';
@@ -124,11 +125,12 @@ function App() {
     <div>
       <Header toggleSettings={toggleSettings}/>
       <Routes>
-      <Route path='/' element={<Home fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} setLessonUnit={setLessonUnit}/>} exact />
+      <Route path='/' element={<Home setLessonUnit={setLessonUnit}/>} exact />
       <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} />} exact />
       <Route path='/result' element={<Result score={score} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/about' element={<About />} exact />
       <Route path='/guide' element={<Guide />} exact />
+      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} lessonUnit={lessonUnit} />} extact />
       </Routes>
       {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} /> : null}
     </div>
