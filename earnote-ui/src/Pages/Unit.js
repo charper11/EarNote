@@ -1,24 +1,10 @@
 import "./Unit.css";
 import { useNavigate } from 'react-router-dom';
 
-const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit}) => {
+const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, getUnitPercent}) => {
     const unit = lessonUnit;
 
     const navigate = useNavigate();
-
-    const getUnitPercent = () => {
-        const keys = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G"];
-        let count = 0;
-        keys.forEach(key => {
-            if(localStorage.getItem(key+unit.toString())) count++;
-        });
-        if(count === 0) {
-            return "0%";
-        } else {
-            let percent = Math.floor((count / 12) * 100);
-            return percent.toString() + "%";
-        }
-    }
 
     const eventthis = (key) => {
         fetchQuestions(key, unit);
@@ -42,7 +28,7 @@ const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit}) => {
                     <g id="Unit" data-name="Unit" className="cls-3" transform="translate(270 25)">
                         <circle className="cls-4" cx="15.5" cy="15.5" r="15.5"/>
                         <circle className="cls-5" cx="15.5" cy="15.5" r="15"/>
-                        <text>Unit {unit} {getUnitPercent()}</text>
+                        <text>Unit {unit} {getUnitPercent(unit)}</text>
                     </g>
 
                     <g id="C" onClick={() => eventthis('C')} data-name="C" className="cls-3" transform="translate(290 78)">

@@ -22,6 +22,20 @@ function App() {
 
   const [settingsState, setSettingsState] = useState(false);
 
+  const getUnitPercent = (unit) => {
+    const keys = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G"];
+    let count = 0;
+    keys.forEach(key => {
+        if(localStorage.getItem(key+unit.toString())) count++;
+    });
+    if(count === 0) {
+        return "";
+    } else {
+        let percent = Math.floor((count / 12) * 100);
+        return percent.toString() + "%";
+    }
+}
+
   const toggleSettings = () => {
       setSettingsState(!settingsState);
   }
@@ -125,12 +139,12 @@ function App() {
     <div>
       <Header toggleSettings={toggleSettings}/>
       <Routes>
-      <Route path='/' element={<Home setLessonUnit={setLessonUnit}/>} exact />
+      <Route path='/' element={<Home setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent}/>} exact />
       <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} />} exact />
       <Route path='/result' element={<Result score={score} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/about' element={<About />} exact />
       <Route path='/guide' element={<Guide />} exact />
-      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} lessonUnit={lessonUnit} />} extact />
+      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} lessonUnit={lessonUnit} getUnitPercent={getUnitPercent} />} extact />
       </Routes>
       {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} /> : null}
     </div>
