@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/EarTrainer/static/css/main.d3e9c313.css",
-    "main.js": "/EarTrainer/static/js/main.74df2f5d.js",
+    "main.css": "/EarTrainer/static/css/main.14f8c050.css",
+    "main.js": "/EarTrainer/static/js/main.ca9a1e05.js",
     "static/media/RubikGlitch-Regular.ttf": "/EarTrainer/static/media/RubikGlitch-Regular.c45582ca18588f33422e.ttf",
     "static/media/ConcertOne-Regular.ttf": "/EarTrainer/static/media/ConcertOne-Regular.646d19d3a58116d78c9c.ttf",
     "static/media/TitanOne-Regular.ttf": "/EarTrainer/static/media/TitanOne-Regular.465442311c8eb8cd5fe8.ttf",
     "index.html": "/EarTrainer/index.html",
-    "main.d3e9c313.css.map": "/EarTrainer/static/css/main.d3e9c313.css.map",
-    "main.74df2f5d.js.map": "/EarTrainer/static/js/main.74df2f5d.js.map"
+    "main.14f8c050.css.map": "/EarTrainer/static/css/main.14f8c050.css.map",
+    "main.ca9a1e05.js.map": "/EarTrainer/static/js/main.ca9a1e05.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3e9c313.css",
-    "static/js/main.74df2f5d.js"
+    "static/css/main.14f8c050.css",
+    "static/js/main.ca9a1e05.js"
   ]
 }
