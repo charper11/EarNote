@@ -12,9 +12,11 @@ const Home = ({setLessonUnit}) => {
 
     return (
         <div className='home'>
-          <button onClick={() => handleClick(1)}>Unit 1</button>
-          <button onClick={() => handleClick(2)}>Unit 2</button>
-          <button onClick={() => handleClick(3)}>Unit 3</button>
+          <div className='button-row'>
+            <div className='button'><button className="glow" onClick={() => handleClick(1)}>Unit 1</button></div>
+            <div className='button'><button className="glow" onClick={() => handleClick(2)}>Unit 2</button></div>
+            <div className='button'><button className="glow" onClick={() => handleClick(3)}>Unit 3</button></div>
+          </div>
         </div>
     );
 };
