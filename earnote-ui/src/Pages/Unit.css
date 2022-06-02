@@ -1,71 +1,69 @@
-.roadmap {
-    padding-top: 60px;
-  }
-  
-  .cls-1 {
-      clip-path: url(#clip-Custom_Size_1);
-    }
-  
-    .cls-2, .cls-5 {
-      fill: none;
-    }
-  
-    .cls-2, .cls-3 {
-      stroke: #707070;
-    }
-  
-    .cls-6 {
-      fill: #fff;
-    }
-  
-    .cls-4 {
-      stroke: none;
-    }
-  
-    .cls-3 {
-      fill: hsl(calc(var(--hue)*360/20),90%,65%);
-      cursor: pointer;
-    }
-  
-    .cls-3:nth-child(14n+1){
-      --hue: 1;
-    }
-    .cls-3:nth-child(14n+2){
-      --hue: 2;
-    }
-    .cls-3:nth-child(14n+3){
-      --hue: 3;
-    }
-    .cls-3:nth-child(14n+4){
-      --hue: 4;
-    }
-    .cls-3:nth-child(14n+5){
-      --hue: 5;
-    }
-    .cls-3:nth-child(14n+6){
-      --hue: 6;
-    }
-    .cls-3:nth-child(14n+7){
-      --hue: 7;
-    }
-    .cls-3:nth-child(14n+8){
-      --hue: 8;
-    }
-    .cls-3:nth-child(14n+9){
-      --hue: 9;
-    }
-    .cls-3:nth-child(14n+10){
-      --hue: 10;
-    }
-    .cls-3:nth-child(14n+11){
-      --hue: 11;
-    }
-    .cls-3:nth-child(14n+12){
-      --hue: 12;
-    }
-    .cls-3:nth-child(14n+13){
-      --hue: 13;
-    }
-    .cls-3:nth-child(14n+14){
-      --hue: 14;
-    }
+:root {
+  --primary: #37a9e1;
+  --primary-gradient: linear-gradient(45deg, #153c7e 0%, #37a9e1 100%);
+}
+
+.unit {
+  padding-top: 40px;
+}
+.section-header {
+  text-align: center;
+}
+.section-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.section-header hr {
+  border: 1px solid #fff;
+  width: 56px;
+}
+.bg-gradient_solid {
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 48px 0;
+}
+.steps {
+  position: relative;
+  margin-top: 32px;
+}
+.steps::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  opacity: 0.4;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.steps-container {
+  position: relative;
+  background-color: inherit;
+  width: calc(50% + 32px);
+  display: flex;
+  left: calc(50% - 31px);
+}
+
+.steps .steps-container .date {
+  font-weight: 900;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  width: 62px;
+  height: 62px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 777;
+  cursor: pointer;
+}
+
+.steps .steps-container .date:hover {
+  transform: scale(1.2);
+}
+
