@@ -28,6 +28,7 @@ const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, getUnitPercen
                             <div className="date" key={k} onClick={() => eventthis(k)}>
                                 {k}
                             </div>
+                            {localStorage.getItem(k+lessonUnit.toString()) ? "✔️" : ""}
                         </div>
                     ))}
                 </div>
