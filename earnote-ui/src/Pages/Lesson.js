@@ -26,7 +26,7 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
               <h3>Unit {lessonUnit} key of {lessonKey}</h3>
             </div>
             <div className='lessonInfo'>
-              <Link to="/">Quit</Link>
+              <Link to="/unit">Quit</Link>
               <div className="meter">
                 <span style={{width: (currQues+1)*10+"%"}}></span>
               </div>

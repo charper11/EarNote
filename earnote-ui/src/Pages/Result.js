@@ -25,7 +25,7 @@ const Result = ({score, lessonKey, lessonUnit}) => {
         <div className='result'>
           <span className='score'> Score: {score}/10 </span>
           <p>{passOrFail}</p>
-          <Link className='unitLink' to="/">Return to Home Page</Link>
+          <Link className='unitLink' to="/unit">Return to Unit {lessonUnit} Page</Link>
         </div>
     );
 };
