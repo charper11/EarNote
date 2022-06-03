@@ -4,12 +4,17 @@ import InfoPopUp from '../Components/InfoPopUp.js';
 import Question from "../Components/Question.js";
 import StartPopUp from '../Components/StartPopUp.js';
 import "./Lesson.css";
+import Home from './Home.js';
 
-const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, thirdNote}) => {
+const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, thirdNote, setLessonUnit, getUnitPercent}) => {
 
     const [currQues, setCurrQues] = useState(0);
     const [isFirst, setIsFirst] = useState(true);
     const [closeInfo, setCloseInfo] = useState(false);
+
+    if(lessonUnit === undefined) {
+      return <Home setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent}></Home>
+    }
 
     const playAudio = (audioPath) => {
       const audio = new Audio(audioPath);
