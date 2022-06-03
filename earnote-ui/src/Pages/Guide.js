@@ -19,7 +19,7 @@ const Guide = () => {
           <h2>Scale</h2>
           <p>A scale is a set of notes arranged in series, from one note to the same note an octave higher. Think, "Do, re, mi, fa, so, la, ti, do."</p>
           <p>Some questions in Ear Trainer will ask you to identify the same note but in a higher or lower octave.</p>
-          <Link to="/">Return to Home Page</Link>
+          <Link className='return' to="/"><h3>Return to Home Page</h3></Link>
         </div>
     );
 };

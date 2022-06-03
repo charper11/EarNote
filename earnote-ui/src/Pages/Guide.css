@@ -3,6 +3,10 @@
     margin: 8px;
 }
 
+.return {
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
 .float-container {
     padding-bottom: 20px;
