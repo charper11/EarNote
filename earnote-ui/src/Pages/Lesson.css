@@ -39,3 +39,15 @@
     overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+    .lessonInfo {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .lessonInfo {
+        width: 70%;
+    }
+}
+
