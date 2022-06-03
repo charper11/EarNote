@@ -1,11 +1,17 @@
 import "./Unit.css";
 import { useNavigate } from 'react-router-dom';
+import Home from './Home.js';
 
-const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, getUnitPercent}) => {
-
-    const keys = ["C", "G", "D", "A", "E", "B", "Gb", "Db", "Ab", "Eb", "Bb", "F"];
+const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, setLessonUnit, getUnitPercent}) => {
 
     const navigate = useNavigate();
+
+    // handle refresh error
+    if(lessonUnit === undefined) {
+        return <Home setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent}></Home>
+    }
+
+    const keys = ["C", "G", "D", "A", "E", "B", "Gb", "Db", "Ab", "Eb", "Bb", "F"];
 
     const eventthis = (key) => {
         fetchQuestions(key, lessonUnit);
