@@ -16,9 +16,9 @@ const About = () => {
           <h2>Why use Ear Trainer?</h2>
           <p>A strong inner ear is essential for understanding music composition. Great musicians have advanced listening skills that improve the quality of their performances, as well as the music creation process.</p>
           <h2>Who made Ear Trainer?</h2>
-          <p>Hey, I'm Colby.</p>
+          <p>Hey, I'm Colby. I'm a software developer who recently decided to learn music but was struggling to improve my 'inner ear'. I couldn't find anything that directly helped with this so I decided to make my own tool. Feel free to connect with me on <a href="https://www.linkedin.com/in/colbyharpersantaclara">LinkedIn</a>!</p>
           <h2>Interested in the code?</h2>
-          <p>Check it out on github.</p>
+          <p>Check it out on github <a href="https://github.com/charper11/EarTrainer">here</a>.</p>
           <Link className="return" to="/"><h3>Return to Home Page</h3></Link>
         </div>
     );
