@@ -2,7 +2,6 @@ import { Button } from '@mui/material';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Question.css';
-import loading from './loading.gif';
 
 const Question = ({
     currQues,
@@ -17,12 +16,10 @@ const Question = ({
     const [result, setResult] = useState();
     const [isSelected, setIsSelected] = useState(false);
     const [submitOrNext, setSubmitOrNext] = useState("submit");
-    const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
 
     const handleNext = () => {
-        setIsLoading(true);
         if(submitOrNext === "submit"){
             setSubmitOrNext("next");
             if(result) setScore(score + 1);
@@ -40,7 +37,6 @@ const Question = ({
                 setTimeout(() => {playAudio(questions[currQues + 1].questionAudio);}, 1000);
             }
         }
-        setIsLoading(false);
     };
 
     const handleSelect = (option, type) => {
@@ -91,7 +87,6 @@ const Question = ({
                   onClick={handleNext}
                   disabled={!(isSelected)}
                 >
-                    {isLoading && <img className='loadImg' src={loading} alt="loading"/>}
                     {submitOrNext}
                 </Button>
             </div>
