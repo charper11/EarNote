@@ -1,11 +1,7 @@
-:root {
-  --primary: #37a9e1;
-  --primary-gradient: linear-gradient(45deg, #153c7e 0%, #37a9e1 100%);
+.unit {
+  padding: 88px 0;
 }
 
-.unit {
-  padding-top: 40px;
-}
 .section-header {
   text-align: center;
 }
@@ -15,14 +11,10 @@
   margin-bottom: 16px;
 }
 .section-header hr {
-  border: 1px solid #fff;
+  border: 1px solid #36454F;
   width: 56px;
 }
-.bg-gradient_solid {
-  background: var(--primary-gradient);
-  color: #fff;
-  padding: 48px 0;
-}
+
 .steps {
   position: relative;
   margin-top: 32px;
@@ -31,7 +23,7 @@
   content: "";
   position: absolute;
   width: 1px;
-  background-color: white;
+  background-color: #36454F;
   opacity: 0.4;
   top: 0;
   bottom: 0;
@@ -47,14 +39,13 @@
   left: calc(50% - 31px);
 }
 
-.steps .steps-container .date {
+.date {
   font-weight: 900;
   font-size: 36px;
-  color: #ffffff;
+  color: #36454F;
   margin-bottom: 30px;
   width: 62px;
   height: 62px;
-  background-color: var(--primary);
   border-radius: 50%;
   flex-shrink: 0;
   align-items: center;
@@ -64,7 +55,7 @@
   cursor: pointer;
 }
 
-.steps .steps-container .date:hover {
+.date:hover {
   transform: scale(1.2);
 }
 
