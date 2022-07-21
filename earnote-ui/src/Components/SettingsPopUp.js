@@ -2,7 +2,7 @@ import './SettingsPopUp.css';
 import { useState } from 'react';
 import { Button } from '@mui/material';
 
-const SettingsPopUp = ({toggleSettings}) => {
+const SettingsPopUp = ({toggleSettings, langObj, setLangObj}) => {
 
     const [selected, setSelected] = useState();
 
@@ -12,6 +12,7 @@ const SettingsPopUp = ({toggleSettings}) => {
 
     const setLanguage = (lang) => {
         localStorage.setItem('lang', lang);
+        setLangObj(require('../Language/' + localStorage.getItem('lang') + ".json"));
         setSelected(lang);
     }
 
@@ -70,7 +71,7 @@ const SettingsPopUp = ({toggleSettings}) => {
                             variant="contained"
                             color="primary"
                             onClick={handleClose}>
-                            Done
+                            {langObj.SettingsPopUp.done}
                         </Button>
                     </div>
             </div>

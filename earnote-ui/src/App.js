@@ -13,6 +13,8 @@ import audioPaths from './Data/Data';
 
 function App() {
 
+  const [langObj, setLangObj] = useState(localStorage.getItem('lang') ? require('./Language/' + localStorage.getItem('lang') + '.json') : require('./Language/en.json'));
+
   const [questions, setQuestions] = useState();
   const [score, setScore] = useState(0);
   const [lessonKey, setLessonKey] = useState();
@@ -146,7 +148,7 @@ function App() {
       <Route path='/guide' element={<Guide />} exact />
       <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} lessonUnit={lessonUnit} setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} />} extact />
       </Routes>
-      {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} /> : null}
+      {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} langObj={langObj} setLangObj={setLangObj} /> : null}
     </div>
     </HashRouter>
   );
