@@ -11,13 +11,8 @@ const SettingsPopUp = ({toggleSettings}) => {
     }
 
     const setLanguage = (lang) => {
-        if(lang){
-            localStorage.setItem('isSpanish', lang)
-            setSelected("spanish");
-        } else{
-            localStorage.removeItem('isSpanish');
-            setSelected("english");
-        }
+        localStorage.setItem('lang', lang);
+        setSelected(lang);
     }
 
     const setColorMode = () => {
@@ -54,8 +49,8 @@ const SettingsPopUp = ({toggleSettings}) => {
                     </div>
                     <div className='content-list'>
                         <span className='content-title'>Language</span>
-                        <button className={localStorage.getItem('isSpanish') ? 'settings-button' : 'settings-button selected'} onClick={() => setLanguage(false)}>English</button>
-                        <button className={localStorage.getItem('isSpanish') ? 'settings-button selected' : 'settings-button'} onClick={() => setLanguage(true)}>Español</button>
+                        <button className={localStorage.getItem('lang') === 'es' ? 'settings-button' : 'settings-button selected'} onClick={() => setLanguage('en')}>English</button>
+                        <button className={localStorage.getItem('lang') === 'es' ? 'settings-button selected' : 'settings-button'} onClick={() => setLanguage('es')}>Español</button>
                     </div>
                     <div className='content-list'>
                         <span className='content-title'>Pass Criteria</span>
