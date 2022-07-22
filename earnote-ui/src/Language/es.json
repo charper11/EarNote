@@ -1,5 +1,10 @@
 {
     "SettingsPopUp" : {
+        "settings": "Ajustes",
+        "color_blind_mode": "El Modo Daltónico",
+        "language": "Idioma",
+        "pass_criteria": "Criterios de Aprobación",
+        "none": "Nada",
         "done": "fin"
     }
 }

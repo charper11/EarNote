@@ -40,25 +40,25 @@ const SettingsPopUp = ({toggleSettings, langObj, setLangObj}) => {
     return (
         <div className="modal">
             <div className="modal_content">
-                    <div className='content-list'><h2>Settings</h2></div>
+                    <div className='content-list'><h2>{langObj.SettingsPopUp.settings}</h2></div>
                     <div className='content-list'>
-                    <span className='content-title'>Color Blind Mode</span>
+                    <span className='content-title'>{langObj.SettingsPopUp.color_blind_mode}</span>
                     <label className="switch">
                         <input type="checkbox" onClick={setColorMode} defaultChecked={localStorage.getItem('isColorBlindSet')==='true'} />
                         <span className="slider round"></span>
                     </label>
                     </div>
                     <div className='content-list'>
-                        <span className='content-title'>Language</span>
+                        <span className='content-title'>{langObj.SettingsPopUp.language}</span>
                         <button className={localStorage.getItem('lang') === 'es' ? 'settings-button' : 'settings-button selected'} onClick={() => setLanguage('en')}>English</button>
                         <button className={localStorage.getItem('lang') === 'es' ? 'settings-button selected' : 'settings-button'} onClick={() => setLanguage('es')}>Español</button>
                     </div>
                     <div className='content-list'>
-                        <span className='content-title'>Pass Criteria</span>
+                        <span className='content-title'>{langObj.SettingsPopUp.pass_criteria}</span>
                         <button
                             className={`settings-button ${handleOptionCSS('none')}`}
                             onClick={removeCriteria}>
-                            None
+                            {langObj.SettingsPopUp.none}
                         </button>
                         <button
                             className={`settings-button ${handleOptionCSS('50')}`}

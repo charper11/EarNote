@@ -1,5 +1,10 @@
 {
     "SettingsPopUp" : {
+        "settings": "Settings",
+        "color_blind_mode": "Color Blind Mode",
+        "language": "Language",
+        "pass_criteria": "Pass Criteria",
+        "none": "None",
         "done": "done"
     }
 }
