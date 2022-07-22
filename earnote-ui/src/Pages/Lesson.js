@@ -44,6 +44,7 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
               score={score}
               setScore={setScore}
               playAudio={playAudio}
+              langObj={langObj}
             />) : (
                 <div>test</div>
             )}

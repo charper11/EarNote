@@ -19,6 +19,9 @@
         "parenthesis": "click on each to hear an example with that note",
         "ready_to_start": "This lesson will train your ear to recognise these 3 notes",
         "start": "start",
-        "quit": "quit"
+        "quit": "quit",
+        "play": "play",
+        "submit": "submit",
+        "next": "next"
     }
 }

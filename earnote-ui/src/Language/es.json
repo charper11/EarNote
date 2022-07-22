@@ -19,6 +19,9 @@
         "parenthesis": "haga clic en cada para escuchar un ejemplo con esta nota",
         "ready_to_start": "Esta clase a entrenar tu oido a reconocer estos 3 notas",
         "start": "iniciar",
-        "quit": "dejar"
+        "quit": "dejar",
+        "play": "toca",
+        "submit": "enviar",
+        "next": "Siguiente"
     }
 }

@@ -10,18 +10,19 @@ const Question = ({
     setScore,
     score,
     playAudio,
+    langObj,
 }) => {
 
     const [selected, setSelected] = useState();
     const [result, setResult] = useState();
     const [isSelected, setIsSelected] = useState(false);
-    const [submitOrNext, setSubmitOrNext] = useState("submit");
+    const [submitOrNext, setSubmitOrNext] = useState(langObj.Lesson.submit);
 
     const navigate = useNavigate();
 
     const handleNext = () => {
         if(submitOrNext === "submit"){
-            setSubmitOrNext("next");
+            setSubmitOrNext(langObj.Lesson.next);
             if(result) setScore(score + 1);
         }
         else if(currQues > 8) {
@@ -32,7 +33,7 @@ const Question = ({
             setSelected();
             setResult();
             setIsSelected(false);
-            setSubmitOrNext("submit");
+            setSubmitOrNext(langObj.Lesson.submit);
             if(questions[currQues + 1].questionType !== 4 && currQues !== 2) {
                 setTimeout(() => {playAudio(questions[currQues + 1].questionAudio);}, 1000);
             }
@@ -63,7 +64,7 @@ const Question = ({
             <div className="singleQuestion">
                 <h2>{questions[currQues].questionText}</h2>
 
-                <Button variant="contained" onClick={() => playAudio(questions[currQues].questionAudio)} disabled={submitOrNext==="next"}>Play</Button>
+                <Button variant="contained" onClick={() => playAudio(questions[currQues].questionAudio)} disabled={submitOrNext==="next"}>{langObj.Lesson.play}</Button>
 
                 <div className="options">
                     {questions[currQues].answerOptions &&
