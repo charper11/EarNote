@@ -28,14 +28,14 @@ const Lesson = ({score, setScore, questions, lessonKey, lessonUnit, secondNote, 
     return (
         <div className='lesson'>
             <div className='lessonTitle'>
-              <h3>Unit {lessonUnit} key of {lessonKey}</h3>
+              <h3>{langObj.unit} {lessonUnit} {langObj.Lesson.key_of} {lessonKey}</h3>
             </div>
             <div className='lessonInfo'>
-              <Link to="/unit">Quit</Link>
+              <Link to="/unit">{langObj.Lesson.quit}</Link>
               <div className="meter">
                 <span style={{width: (currQues+1)*10+"%"}}></span>
               </div>
-              <span>Score: {score}</span>
+              <span>{langObj.score}: {score}</span>
             </div>
             { 1 === 1 ? (<Question
               currQues={currQues}

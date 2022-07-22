@@ -2,6 +2,7 @@
     "unit": "Unidad",
     "about": "Sobre",
     "guide": "Guía",
+    "score": "puntaje",
     "SettingsPopUp" : {
         "settings": "Ajustes",
         "color_blind_mode": "El Modo Daltónico",
@@ -17,6 +18,7 @@
         "three_notes": "mayor es compuesto por estos 3 notas",
         "parenthesis": "haga clic en cada para escuchar un ejemplo con esta nota",
         "ready_to_start": "Esta clase a entrenar tu oido a reconocer estos 3 notas",
-        "start": "iniciar"
+        "start": "iniciar",
+        "quit": "dejar"
     }
 }
