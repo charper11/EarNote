@@ -2,7 +2,7 @@ import "./Unit.css";
 import { useNavigate } from 'react-router-dom';
 import Home from './Home.js';
 
-const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, setLessonUnit, getUnitPercent}) => {
+const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, setLessonUnit, getUnitPercent, langObj}) => {
 
     const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ const Unit = ({fetchQuestions, setScore, setLessonKey, lessonUnit, setLessonUnit
         <div className="unit">
             <div className="container">
                 <div className="section-header">
-                    <h2>Unit {lessonUnit} {getUnitPercent(lessonUnit)}</h2>
+                    <h2>{langObj.unit} {lessonUnit} {getUnitPercent(lessonUnit)}</h2>
                     <hr/>
                 </div>
                 <div className="steps">

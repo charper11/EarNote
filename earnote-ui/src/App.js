@@ -146,7 +146,7 @@ function App() {
       <Route path='/result' element={<Result score={score} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/about' element={<About />} exact />
       <Route path='/guide' element={<Guide />} exact />
-      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} lessonUnit={lessonUnit} setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} />} extact />
+      <Route path='/unit' element={<Unit fetchQuestions={fetchQuestions} setScore={setScore} setLessonKey={setLessonKey} lessonUnit={lessonUnit} setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} langObj={langObj} />} extact />
       </Routes>
       {settingsState ? <SettingsPopUp toggleSettings={toggleSettings} langObj={langObj} setLangObj={setLangObj} /> : null}
     </div>
