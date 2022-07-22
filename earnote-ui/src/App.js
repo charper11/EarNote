@@ -142,7 +142,7 @@ function App() {
       <Header toggleSettings={toggleSettings} langObj={langObj}/>
       <Routes>
       <Route path='/' element={<Home setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} langObj={langObj} />} exact />
-      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} />} exact />
+      <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} langObj={langObj} />} exact />
       <Route path='/result' element={<Result score={score} lessonKey={lessonKey} lessonUnit={lessonUnit} />} exact />
       <Route path='/about' element={<About />} exact />
       <Route path='/guide' element={<Guide />} exact />

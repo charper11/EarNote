@@ -1,7 +1,7 @@
 import './StartPopUp.css';
 import { Button } from '@mui/material';
 
-const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, secondNote, thirdNote}) => {
+const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, secondNote, thirdNote, langObj}) => {
 
     const handleStart = () => {
         setIsFirst(false);
@@ -26,9 +26,9 @@ const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, se
     return (
         <div className="modal">
             <div className="modal_content">
-                <h2>Key of {lessonKey} lesson {lessonUnit}</h2>
-                <p>The chord {lessonKey} major is made up of these 3 notes</p>
-                <p>(click on each to hear an example with that note)</p>
+                <h2>{langObj.Lesson.key_of} {lessonKey} {langObj.Lesson.lesson} {lessonUnit}</h2>
+                <p>{langObj.Lesson.the_chord} {lessonKey} {langObj.Lesson.three_notes}</p>
+                <p>({langObj.Lesson.parenthesis})</p>
                 <svg height="100" width="100">
                     <g id="first-note" className="note-circle" onClick={() => playAudio(keyProps[lessonKey][1])}>
                       <circle cx="50" cy="50" r="40" fill={keyProps[lessonKey][0]} />
@@ -47,8 +47,8 @@ const StartPopUp = ({setIsFirst, playAudio, questions, lessonKey, lessonUnit, se
                       <text x="50%" y="50%" textAnchor="middle" stroke="#36454F" strokeWidth="2px" fill="#36454F" dy=".3em" fontSize="3.5em">{thirdNote}</text>
                     </g>
                 </svg>
-                <p>This lesson will train your ear to recognise these 3 notes</p>
-                <Button variant="contained" color="primary" onClick={handleStart}>start</Button>
+                <p>{langObj.Lesson.ready_to_start}</p>
+                <Button variant="contained" color="primary" onClick={handleStart}>{langObj.Lesson.start}</Button>
             </div>
         </div>
     );

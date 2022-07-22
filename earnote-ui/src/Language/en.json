@@ -9,5 +9,14 @@
         "pass_criteria": "Pass Criteria",
         "none": "None",
         "done": "done"
+    },
+    "Lesson": {
+        "key_of": "Key of",
+        "lesson": "lesson",
+        "the_chord": "The chord",
+        "three_notes": "major is made up of these 3 notes",
+        "parenthesis": "click on each to hear an example with that note",
+        "ready_to_start": "This lesson will train your ear to recognise these 3 notes",
+        "start": "start"
     }
 }
