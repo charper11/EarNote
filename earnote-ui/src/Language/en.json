@@ -23,6 +23,10 @@
         "play": "play",
         "submit": "submit",
         "next": "next",
-        "info": "Let's make it a bit harder. Now it will ask you to match 2 sounds with the same note but different scale."
+        "info": "Let's make it a bit harder. Now it will ask you to match 2 sounds with the same note but different scale.",
+        "passed": "you passed!",
+        "failed": "you did not score high enough, try again",
+        "return": "Return to Unit",
+        "page": "Page"
     }
 }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Result.css';
 
-const Result = ({score, lessonKey, lessonUnit}) => {
+const Result = ({score, lessonKey, lessonUnit, langObj}) => {
 
     let passOrFail = "";
 
@@ -10,22 +10,22 @@ const Result = ({score, lessonKey, lessonUnit}) => {
     if(localStorage.getItem('passCriteria')) {
       if(score >= localStorage.getItem('passCriteria')) {
         localStorage.setItem(lessonKey + lessonUnit.toString(), true);
-        passOrFail = "you passed!";
+        passOrFail = langObj.Lesson.passed;
       }
       else {
-        passOrFail = "you did not score high enough, try again"
+        passOrFail = langObj.Lesson.failed;
       }
     }
     else {
       localStorage.setItem(lessonKey + lessonUnit.toString(), true);
-      passOrFail = "you passed!";
+      passOrFail = langObj.Lesson.passed;
     }
 
     return (
         <div className='result'>
-          <span className='score'> Score: {score}/10 </span>
+          <span className='score'> {langObj.score}: {score}/10 </span>
           <p>{passOrFail}</p>
-          <Link className='unitLink' to="/unit">Return to Unit {lessonUnit} Page</Link>
+          <Link className='unitLink' to="/unit">{langObj.Lesson.return} {lessonUnit} {langObj.Lesson.page}</Link>
         </div>
     );
 };
