@@ -88,16 +88,16 @@ function App() {
       const answer = keys[Math.floor(Math.random() * keys.length)];
       if(unit === 1) {
         if(i<3){
-          questionSet.push({questionType: 1, questionText: 'What do you hear?'});
+          questionSet.push({questionType: 1, questionText: langObj.Lesson.question1});
         } else {
-          questionSet.push({questionType: 2, questionText: 'Which is the same note?'});
+          questionSet.push({questionType: 2, questionText: langObj.Lesson.question2});
         }
       }
       if(unit === 2) {
-          questionSet.push({questionType: 4, questionText: 'Select the ' + Object.keys(keyDict)[answer-1] + ' note.'});
+          questionSet.push({questionType: 4, questionText: langObj.Lesson.select + Object.keys(keyDict)[answer-1] + langObj.Lesson.note});
       }
       if(unit === 3) {
-        questionSet.push({questionType: 3, questionText: 'What key do you hear?'});
+        questionSet.push({questionType: 3, questionText: langObj.Lesson.question3});
       }
       questionSet[i].questionKey = Object.keys(keyDict)[answer-1];
 

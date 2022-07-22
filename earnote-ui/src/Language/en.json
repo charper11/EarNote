@@ -27,6 +27,11 @@
         "passed": "you passed!",
         "failed": "you did not score high enough, try again",
         "return": "Return to Unit",
-        "page": "Page"
+        "page": "Page",
+        "question1": "What do you hear?",
+        "question2": "Which is the same note?",
+        "question3": "What key do you hear?",
+        "select": "Select the ",
+        "note": " note."
     }
 }

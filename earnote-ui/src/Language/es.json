@@ -27,6 +27,11 @@
         "passed": "¡Pasaste!",
         "failed": "No anotaste lo suficiente, inténtelo de nuevo",
         "return": "Volver a Unidad",
-        "page": "Página"
+        "page": "Página",
+        "question1": "¿Qué escuchas?",
+        "question2": "¿Que es la misma nota?",
+        "question3": "¿Qué nota escuchas?",
+        "select": "Seleccionar el ",
+        "note": " nota."
     }
 }
