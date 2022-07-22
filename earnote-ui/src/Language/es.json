@@ -22,6 +22,7 @@
         "quit": "dejar",
         "play": "toca",
         "submit": "enviar",
-        "next": "Siguiente"
+        "next": "siguiente",
+        "info": "Hagamos uno un poco mas difícil. Ahora le preguntará para que concuerde 2 sonidos con la misma nota pero tono diferente."
     }
 }

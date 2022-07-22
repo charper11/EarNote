@@ -22,6 +22,7 @@
         "quit": "quit",
         "play": "play",
         "submit": "submit",
-        "next": "next"
+        "next": "next",
+        "info": "Let's make it a bit harder. Now it will ask you to match 2 sounds with the same note but different scale."
     }
 }
