@@ -1,5 +1,7 @@
 {
     "unit": "Unidad",
+    "about": "Sobre",
+    "guide": "Guía",
     "SettingsPopUp" : {
         "settings": "Ajustes",
         "color_blind_mode": "El Modo Daltónico",

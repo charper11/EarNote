@@ -139,7 +139,7 @@ function App() {
   return (
     <HashRouter>
     <div>
-      <Header toggleSettings={toggleSettings}/>
+      <Header toggleSettings={toggleSettings} langObj={langObj}/>
       <Routes>
       <Route path='/' element={<Home setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} langObj={langObj} />} exact />
       <Route path='/lesson' element={<Lesson score={score} setScore={setScore} questions={questions} lessonKey={lessonKey} lessonUnit={lessonUnit} secondNote={secondNote} thirdNote={thirdNote} setLessonUnit={setLessonUnit} getUnitPercent={getUnitPercent} />} exact />

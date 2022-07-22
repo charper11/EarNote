@@ -1,5 +1,7 @@
 {
     "unit": "Unit",
+    "about": "About",
+    "guide": "Guide",
     "SettingsPopUp" : {
         "settings": "Settings",
         "color_blind_mode": "Color Blind Mode",
