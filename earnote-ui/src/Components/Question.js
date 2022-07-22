@@ -21,7 +21,7 @@ const Question = ({
     const navigate = useNavigate();
 
     const handleNext = () => {
-        if(submitOrNext === "submit"){
+        if(submitOrNext === langObj.Lesson.submit){
             setSubmitOrNext(langObj.Lesson.next);
             if(result) setScore(score + 1);
         }
@@ -50,9 +50,9 @@ const Question = ({
     };
 
     const handleOptionCSS = (i) => {
-        if (submitOrNext === "submit" && selected === i) {
+        if (submitOrNext === langObj.Lesson.submit && selected === i) {
             return "select";
-        } else if (submitOrNext === "next") {
+        } else if (submitOrNext === langObj.Lesson.next) {
             if (selected === i && result) return localStorage.getItem('isColorBlindSet') ? "correct colorBlind" : "correct";
             else if (selected === i && !result) return localStorage.getItem('isColorBlindSet') ? "wrong colorBlind" : "wrong";
             else if (i.isCorrect) return localStorage.getItem('isColorBlindSet') ? "correct colorBlind" : "correct";
@@ -73,11 +73,11 @@ const Question = ({
                             className={`singleOption ${selected && handleOptionCSS(options)}`}
                             key={options.option}
                             onClick={() => handleSelect(options, questions[currQues].questionType)}
-                            disabled={submitOrNext==="next"}
+                            disabled={submitOrNext===langObj.Lesson.next}
                         >
                             {questions[currQues].questionType !== 4 ? (options.option) : ("🔊")}
-                            {localStorage.getItem('isColorBlindSet') && options.isCorrect && submitOrNext==="next" ? "\t✔️" : null}
-                            {localStorage.getItem('isColorBlindSet') && submitOrNext==="next" && selected===options && !result ? "\t❌" : null}
+                            {localStorage.getItem('isColorBlindSet') && options.isCorrect && submitOrNext===langObj.Lesson.next ? "\t✔️" : null}
+                            {localStorage.getItem('isColorBlindSet') && submitOrNext===langObj.Lesson.next && selected===options && !result ? "\t❌" : null}
                         </button>
                     ))}
                 </div>
