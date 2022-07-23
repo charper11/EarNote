@@ -33,5 +33,22 @@
         "question3": "¿Qué nota escuchas?",
         "select": "Seleccionar el ",
         "note": " nota."
+    },
+    "About": {
+        "what": "¿Qué es Ear Trainer?",
+        "what_content": "El programa Ear Trainer es una forma fácil y divertida de comenzar a aprender a reconocer notas con solo escucharlas.",
+        "how_do_i_learn": "¿Cómo aprendo con Ear Trainer?",
+        "how_do_i_learn_content1": "El Ear Trainer programa lo lleva por un camino alrededor del Círculo de Quintas, aprendiendo notas en un acorde a la vez.",
+        "how_do_i_learn_content2": "Hay tres unidades cada una con 12 lecciones (una para cada tecla). Cada unidad se basa en la última y aumenta en dificultad a medida que aumenta su habilidad.",
+        "how_is_progress": "¿Cómo se pista el progreso?",
+        "how_is_progress_content": "Una vez que se completa una lección, se actualizará su progreso. Cómo determinar qué constituye una lección completa se puede aplicar en la configuración. De forma predeterminada, completar las 10 preguntas independientemente de la puntuación otorgará una lección completa.",
+        "why": "¿Por qué usar Ear Trainer",
+        "why_content": "Un oído interno fuerte es esencial para comprender la composición musical. Los grandes músicos tienen habilidades auditivas avanzadas que mejoran la calidad de sus interpretaciones, así como el proceso de creación musical.",
+        "who": "¿Quien hizo Ear Trainer",
+        "who_content": "Hola, soy Colby. Soy un desarrollador de software que recientemente decidió aprender música pero estaba luchando por mejorar su 'oído interno'. No pude encontrar nada que ayudara directamente con esto, así que decidí hacer mi propia herramienta. ¡Siéntase libre de conectarse conmigo en",
+        "interested": "¿Interesado en el codigo?",
+        "interested_content": "Échale un vistazo en github",
+        "here": "aquí",
+        "return": "Volver a Página Casa"
     }
 }

@@ -33,5 +33,22 @@
         "question3": "What key do you hear?",
         "select": "Select the ",
         "note": " note."
+    },
+    "About": {
+        "what": "What is Ear Trainer?",
+        "what_content": "The Ear Trainer program is a fun and easy way to start learning how to recognize notes just by hearing them.",
+        "how_do_i_learn": "How do I learn with Ear Trainer?",
+        "how_do_i_learn_content1": "The ear trainer program takes you on a path around the Circle of Fifths, learning notes in one chord at a time.",
+        "how_do_i_learn_content2": "There are three units each with 12 lessons (one for each key). Each unit builds on the last and increases in difficulty as you increase in skill.",
+        "how_is_progress": "How is progress tracked?",
+        "how_is_progress_content": "Once a lesson is completed, your progress will be updated. How to determine what constitutes a completed lesson can be applied in the settings. By default, completing all 10 questions regardless of score will award a completed lesson.",
+        "why": "Why use Ear Trainer?",
+        "why_content": "A strong inner ear is essential for understanding music composition. Great musicians have advanced listening skills that improve the quality of their performances, as well as the music creation process.",
+        "who": "Who made Ear Trainer?",
+        "who_content": "Hey, I'm Colby. I'm a software developer who recently decided to learn music but was struggling to improve my 'inner ear'. I couldn't find anything that directly helped with this so I decided to make my own tool. Feel free to connect with me on",
+        "interested": "Interested in the code?",
+        "interested_content": "Check it out on github",
+        "here": "here",
+        "return": "Return to Home Page"
     }
 }
