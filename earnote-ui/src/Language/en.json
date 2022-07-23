@@ -3,6 +3,7 @@
     "about": "About",
     "guide": "Guide",
     "score": "score",
+    "return": "Return to Home Page",
     "SettingsPopUp" : {
         "settings": "Settings",
         "color_blind_mode": "Color Blind Mode",
@@ -48,7 +49,15 @@
         "who_content": "Hey, I'm Colby. I'm a software developer who recently decided to learn music but was struggling to improve my 'inner ear'. I couldn't find anything that directly helped with this so I decided to make my own tool. Feel free to connect with me on",
         "interested": "Interested in the code?",
         "interested_content": "Check it out on github",
-        "here": "here",
-        "return": "Return to Home Page"
+        "here": "here"
+    },
+    "Guide": {
+        "circle_of_fifths": "The Circle of Fifths",
+        "circle_of_fifths_content1": "Starting with C and moving clockwise note to note (C to G to D to A, etc), you'll notice that after 12 notes we return back to our starting point. This cyclical nature is called the circle of fifths and is one of the most fundamental principles in all of music theory.",
+        "circle_of_fifths_content2": "If you pick one of the 12 notes in the circle, it along with the note to the right, and the note 4 to the right, are the notes that create the chord of that key.",
+        "circle_of_fifths_content3": "Ear Trainer progresses through this circle, with each lesson covering one chord at a time.",
+        "scale": "Scale",
+        "scale_content1": "A scale is a set of notes arranged in series, from one note to the same note an octave higher. Think, \"Do, re, mi, fa, so, la, ti, do.\"",
+        "scale_content2": "Some questions in Ear Trainer will ask you to identify the same note but in a higher or lower octave."
     }
 }

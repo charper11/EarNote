@@ -19,7 +19,7 @@ const About = ({langObj}) => {
           <p>{langObj.About.who_content} <a href="https://www.linkedin.com/in/colbyharpersantaclara">LinkedIn</a>!</p>
           <h2>{langObj.About.interested}</h2>
           <p>{langObj.About.interested_content} <a href="https://github.com/charper11/EarTrainer">{langObj.About.here}</a>.</p>
-          <Link className="return" to="/"><h3>{langObj.About.return}</h3></Link>
+          <Link className="return" to="/"><h3>{langObj.return}</h3></Link>
         </div>
     );
 };

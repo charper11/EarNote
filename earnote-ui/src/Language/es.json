@@ -3,6 +3,7 @@
     "about": "Sobre",
     "guide": "Guía",
     "score": "puntaje",
+    "return": "Volver a Página Casa",
     "SettingsPopUp" : {
         "settings": "Ajustes",
         "color_blind_mode": "El Modo Daltónico",
@@ -48,7 +49,15 @@
         "who_content": "Hola, soy Colby. Soy un desarrollador de software que recientemente decidió aprender música pero estaba luchando por mejorar su 'oído interno'. No pude encontrar nada que ayudara directamente con esto, así que decidí hacer mi propia herramienta. ¡Siéntase libre de conectarse conmigo en",
         "interested": "¿Interesado en el codigo?",
         "interested_content": "Échale un vistazo en github",
-        "here": "aquí",
-        "return": "Volver a Página Casa"
+        "here": "aquí"
+    },
+    "Guide": {
+        "circle_of_fifths": "El Círculo de Quintas",
+        "circle_of_fifths_content1": "Comenzando con C y moviéndose en el sentido de las agujas del reloj nota a nota (C a G a D a A, etc.), notará que después de 12 notas volvemos a nuestro punto de partida. Esta naturaleza cíclica se llama círculo de quintas y es uno de los principios más fundamentales de toda la teoría musical.",
+        "circle_of_fifths_content2": "Si elige una de las 12 notas en el círculo, junto con la nota a la derecha y la nota 4 a la derecha, son las notas que crean el acorde de esa tecla.",
+        "circle_of_fifths_content3": "Ear Trainer avanza a través de este círculo, con cada lección cubriendo un acorde a la vez.",
+        "scale": "Escala",
+        "scale_content1": "Una escala es un conjunto de notas dispuestas en serie, desde una nota hasta la misma nota una octava más alta. Piensa: \"Do, re, mi, fa, so, la, ti, do.\"",
+        "scale_content2": "Algunas preguntas en Ear Trainer le pedirán que identifique la misma nota pero en una octava más alta o más baja."
     }
 }
